@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "new_soviet:block/sand/cracked_sand_tiles",
+    "particle": "new_soviet:block/sand/cracked_sand_tiles"
+
+  }
+}
