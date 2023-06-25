@@ -88,10 +88,11 @@ public class NSE_Blocks {
 
     public static final Block SMOOTH_TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF));
 
-    // MISC =====================================
+    // Industrial =====================================
     public static final Block INDUSTRIAL_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
-    public static final Block RED_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
-    public static final Block ORANGE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
+    public static final Block RED_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
+    public static final Block ORANGE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
+    public static final Block METAL_PLATING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
 
     // WOOD/FLOOR ======
     public static final Block HERRINGBONE_ACACIA_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
@@ -111,7 +112,7 @@ public class NSE_Blocks {
     public static final Block HERRINGBONE_SPRUCE_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
     public static final Block CROSS_SPRUCE_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
 
-    public static final Block SMALL_HERRINGBONE_PARQUET = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
+    public static final Block HERRINGBONE_PARQUET = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
     public static final Block STRAIGHT_PARQUET = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
     public static final Block SEPARATED_PARQUET = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
 
@@ -233,6 +234,8 @@ public class NSE_Blocks {
         register("industrial_warning", () -> INDUSTRIAL_WARNING, NSE_TAB);
         register("red_warning", () -> RED_WARNING, NSE_TAB);
         register("orange_warning", () -> ORANGE_WARNING, NSE_TAB);
+        register("metal_plating", () -> METAL_PLATING, NSE_TAB);
+
 
         register("herringbone_acacia_planks", () -> HERRINGBONE_ACACIA_PLANKS, NSE_TAB);
         register("cross_acacia_planks", () -> CROSS_ACACIA_PLANKS, NSE_TAB);
@@ -251,7 +254,7 @@ public class NSE_Blocks {
         register("herringbone_spruce_planks", () -> HERRINGBONE_SPRUCE_PLANKS, NSE_TAB);
         register("cross_spruce_planks", () -> CROSS_SPRUCE_PLANKS, NSE_TAB);
 
-        register("small_herringbone_parquet", () -> SMALL_HERRINGBONE_PARQUET, NSE_TAB);
+        register("herringbone_parquet", () -> HERRINGBONE_PARQUET, NSE_TAB);
         register("straight_parquet", () -> STRAIGHT_PARQUET, NSE_TAB);
         register("separated_parquet", () -> SEPARATED_PARQUET, NSE_TAB);
 
