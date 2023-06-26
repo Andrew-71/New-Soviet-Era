@@ -5,12 +5,14 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.WallBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
@@ -86,6 +88,11 @@ public class NSE_Blocks {
     public static final Block BIG_GRANITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
     public static final Block SMALL_GRANITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
 
+    public static final Block GREEN_WHITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
+    public static final Block CRACKED_GREEN_WHITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
+    public static final Block MOSSY_GREEN_WHITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
+
+    // TODO: There are far more of these
     public static final Block SMOOTH_TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF));
 
     // Industrial =====================================
@@ -93,6 +100,7 @@ public class NSE_Blocks {
     public static final Block RED_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
     public static final Block ORANGE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
     public static final Block METAL_PLATING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
+    public static final WallBlock CONCRETE_WALL = new WallBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
 
     // WOOD/FLOOR ======
     public static final Block HERRINGBONE_ACACIA_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
@@ -117,15 +125,15 @@ public class NSE_Blocks {
     public static final Block SEPARATED_PARQUET = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
 
     //TODO: Wool or wood?
-    public static final Block GREEN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOL));
-    public static final Block BLUE_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOL));
-    public static final Block RED_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOL));
-    public static final Block GRAY_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOL));
-    public static final Block ORANGE_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOL));
-    public static final Block BROWN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOL));
-    public static final Block CYAN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOL));
-    public static final Block CROSS_ORANGE_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOL));
-    public static final Block CROSS_BROWN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOL));
+    public static final Block GREEN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
+    public static final Block BLUE_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
+    public static final Block RED_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
+    public static final Block GRAY_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
+    public static final Block ORANGE_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
+    public static final Block BROWN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
+    public static final Block CYAN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
+    public static final Block CROSS_ORANGE_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
+    public static final Block CROSS_BROWN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
 
     // Concrete
     //RED_CONCRETE
@@ -229,13 +237,16 @@ public class NSE_Blocks {
         register("mossy_light_blue_bricks", () -> MOSSY_LIGHT_BLUE_BRICKS, NSE_TAB);
         register("big_granite_tiles", () -> BIG_GRANITE_TILES, NSE_TAB);
         register("small_granite_tiles", () -> SMALL_GRANITE_TILES, NSE_TAB);
+        register("green_white_tiles", () -> GREEN_WHITE_TILES, NSE_TAB);
+        register("cracked_green_white_tiles", () -> CRACKED_GREEN_WHITE_TILES, NSE_TAB);
+        register("mossy_green_white_tiles", () -> MOSSY_GREEN_WHITE_TILES, NSE_TAB);
         register("smooth_tuff_tiles", () -> SMOOTH_TUFF_TILES, NSE_TAB);
 
         register("industrial_warning", () -> INDUSTRIAL_WARNING, NSE_TAB);
         register("red_warning", () -> RED_WARNING, NSE_TAB);
         register("orange_warning", () -> ORANGE_WARNING, NSE_TAB);
         register("metal_plating", () -> METAL_PLATING, NSE_TAB);
-
+        register("concrete_wall", () -> CONCRETE_WALL, NSE_TAB);  // TODO: Broken
 
         register("herringbone_acacia_planks", () -> HERRINGBONE_ACACIA_PLANKS, NSE_TAB);
         register("cross_acacia_planks", () -> CROSS_ACACIA_PLANKS, NSE_TAB);

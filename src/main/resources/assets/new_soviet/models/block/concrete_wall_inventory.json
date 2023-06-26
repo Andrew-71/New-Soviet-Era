@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "new_soviet:block/industrial/concrete_wall"
+  }
+}
