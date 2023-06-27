@@ -124,7 +124,6 @@ public class NSE_Blocks {
     public static final Block STRAIGHT_PARQUET = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
     public static final Block SEPARATED_PARQUET = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
 
-    //TODO: Wool or wood?
     public static final Block GREEN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
     public static final Block BLUE_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
     public static final Block RED_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
