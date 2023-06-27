@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "new_soviet:block/floor/linoleum/blue_linoleum",
-    "particle": "new_soviet:block/floor/linoleum/blue_linoleum"
-
-  }
-}

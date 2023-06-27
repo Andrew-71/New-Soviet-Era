@@ -12,7 +12,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
@@ -28,12 +27,12 @@ public class NSE_Blocks {
     public static final Block MOSSY_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS));
     public static final Block SMALL_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS));
     public static final Block SMALL_CRACKED_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS));
+    public static final Block BIG_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS));
+    public static final Block HERRINGBONE_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS));
     public static final Block SAND_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS));
     public static final Block CRACKED_SAND_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS));
     public static final Block MOSSY_SAND_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS));
-    public static final Block BIG_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS));
     public static final Block BIG_SAND_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS));
-    public static final Block HERRINGBONE_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS));
     public static final Block CROSS_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS));
 
     public static final Block TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
@@ -54,12 +53,12 @@ public class NSE_Blocks {
     public static final Block GLAZED_AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
     public static final Block CRACKED_GLAZED_AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
 
-    public static final Block DIORITE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
-    public static final Block CRACKED_DIORITE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
-    public static final Block MOSSY_DIORITE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
     public static final Block SMALL_DIORITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
     public static final Block SMALL_CRACKED_DIORITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
     public static final Block BIG_DIORITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
+    public static final Block DIORITE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
+    public static final Block CRACKED_DIORITE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
+    public static final Block MOSSY_DIORITE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
 
     public static final Block CALCITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.CALCITE));
     public static final Block CRACKED_CALCITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.CALCITE));
@@ -93,7 +92,13 @@ public class NSE_Blocks {
     public static final Block MOSSY_GREEN_WHITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
 
     // TODO: There are far more of these
-    public static final Block SMOOTH_TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF));
+    public static final Block TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF));
+    public static final Block CRACKED_TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF));
+    public static final Block MOSSY_TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF));
+    public static final Block TUFF_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF));
+    public static final Block CRACKED_TUFF_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF));
+    public static final Block MOSSY_TUFF_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF));
+    public static final Block BIG_TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF));
 
     // Industrial =====================================
     public static final Block INDUSTRIAL_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
@@ -135,30 +140,6 @@ public class NSE_Blocks {
     public static final Block CROSS_BROWN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD));
 
     // Concrete
-    //RED_CONCRETE
-    //CRACKED_RED_CONCRETE
-    //BLUE_CONCRETE
-    //CRACKED_BLUE_CONCRETE
-    //
-//        blocks.add(new BasicBlock("red_concrete", 2, 2, Material.STONE));
-//        blocks.add(new BasicBlock("cracked_red_concrete", 2, 2, Material.STONE));
-//
-//        blocks.add(new BasicBlock("blue_concrete", 2, 2, Material.STONE));
-//        blocks.add(new BasicBlock("cracked_blue_concrete", 2, 2, Material.STONE));
-//
-//        blocks.add(new BasicBlock("green_concrete", 2, 2, Material.STONE));
-//        blocks.add(new BasicBlock("cracked_green_concrete", 2, 2, Material.STONE));
-//
-//        blocks.add(new BasicBlock("yellow_concrete", 2, 2, Material.STONE));
-//        blocks.add(new BasicBlock("cracked_yellow_concrete", 2, 2, Material.STONE));
-//
-//        blocks.add(new BasicBlock("white_concrete", 2, 2, Material.STONE));
-//        blocks.add(new BasicBlock("cracked_white_concrete", 2, 2, Material.STONE));
-//
-//        blocks.add(new BasicBlock("beige_concrete", 2, 2, Material.STONE));
-//        blocks.add(new BasicBlock("cracked_beige_concrete", 2, 2, Material.STONE));
-//        return blocks;
-//    }
 
     private static final ItemGroup NSE_TAB = FabricItemGroup.builder()
             .icon(() -> new ItemStack(CALCITE_TILES))
@@ -185,12 +166,12 @@ public class NSE_Blocks {
         register("mossy_sand_tiles", () -> MOSSY_SAND_TILES, NSE_TAB);
         register("small_sand_tiles", () -> SMALL_SAND_TILES, NSE_TAB);
         register("small_cracked_sand_tiles", () -> SMALL_CRACKED_SAND_TILES, NSE_TAB);
+        register("herringbone_sand_tiles", () -> HERRINGBONE_SAND_TILES, NSE_TAB);
+        register("big_sand_tiles", () -> BIG_SAND_TILES, NSE_TAB);
         register("sand_bricks", () -> SAND_BRICKS, NSE_TAB);
         register("cracked_sand_bricks", () -> CRACKED_SAND_BRICKS, NSE_TAB);
         register("mossy_sand_bricks", () -> MOSSY_SAND_BRICKS, NSE_TAB);
-        register("big_sand_tiles", () -> BIG_SAND_TILES, NSE_TAB);
         register("big_sand_bricks", () -> BIG_SAND_BRICKS, NSE_TAB);
-        register("herringbone_sand_tiles", () -> HERRINGBONE_SAND_TILES, NSE_TAB);
         register("cross_sand_tiles", () -> CROSS_SAND_TILES, NSE_TAB);
         register("teal_tiles", () -> TEAL_TILES, NSE_TAB);
         register("cracked_teal_tiles", () -> CRACKED_TEAL_TILES, NSE_TAB);
@@ -208,12 +189,12 @@ public class NSE_Blocks {
         register("small_cracked_aquamarine_tiles", () -> SMALL_CRACKED_AQUAMARINE_TILES, NSE_TAB);
         register("glazed_aquamarine_tiles", () -> GLAZED_AQUAMARINE_TILES, NSE_TAB);
         register("cracked_glazed_aquamarine_tiles", () -> CRACKED_GLAZED_AQUAMARINE_TILES, NSE_TAB);
-        register("diorite_bricks", () -> DIORITE_BRICKS, NSE_TAB);
-        register("cracked_diorite_bricks", () -> CRACKED_DIORITE_BRICKS, NSE_TAB);
-        register("mossy_diorite_bricks", () -> MOSSY_DIORITE_BRICKS, NSE_TAB);
         register("small_diorite_tiles", () -> SMALL_DIORITE_TILES, NSE_TAB);
         register("small_cracked_diorite_tiles", () -> SMALL_CRACKED_DIORITE_TILES, NSE_TAB);
         register("big_diorite_tiles", () -> BIG_DIORITE_TILES, NSE_TAB);
+        register("diorite_bricks", () -> DIORITE_BRICKS, NSE_TAB);
+        register("cracked_diorite_bricks", () -> CRACKED_DIORITE_BRICKS, NSE_TAB);
+        register("mossy_diorite_bricks", () -> MOSSY_DIORITE_BRICKS, NSE_TAB);
         register("calcite_tiles", () -> CALCITE_TILES, NSE_TAB);
         register("cracked_calcite_tiles", () -> CRACKED_CALCITE_TILES, NSE_TAB);
         register("mossy_calcite_tiles", () -> MOSSY_CALCITE_TILES, NSE_TAB);
@@ -239,7 +220,13 @@ public class NSE_Blocks {
         register("green_white_tiles", () -> GREEN_WHITE_TILES, NSE_TAB);
         register("cracked_green_white_tiles", () -> CRACKED_GREEN_WHITE_TILES, NSE_TAB);
         register("mossy_green_white_tiles", () -> MOSSY_GREEN_WHITE_TILES, NSE_TAB);
-        register("smooth_tuff_tiles", () -> SMOOTH_TUFF_TILES, NSE_TAB);
+        register("tuff_tiles", () -> TUFF_TILES, NSE_TAB);
+        register("cracked_tuff_tiles", () -> CRACKED_TUFF_TILES, NSE_TAB);
+        register("mossy_tuff_tiles", () -> MOSSY_TUFF_TILES, NSE_TAB);
+        register("tuff_bricks", () -> TUFF_BRICKS, NSE_TAB);
+        register("cracked_tuff_bricks", () -> CRACKED_TUFF_BRICKS, NSE_TAB);
+        register("mossy_tuff_bricks", () -> MOSSY_TUFF_BRICKS, NSE_TAB);
+        register("big_tuff_tiles", () -> BIG_TUFF_TILES, NSE_TAB);
 
         register("industrial_warning", () -> INDUSTRIAL_WARNING, NSE_TAB);
         register("red_warning", () -> RED_WARNING, NSE_TAB);
