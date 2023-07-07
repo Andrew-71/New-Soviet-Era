@@ -80,6 +80,10 @@ public class NSE_Blocks {
     public static final Block LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
     public static final Block CRACKED_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
     public static final Block MOSSY_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
+    public static final Block SMALL_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
+    public static final Block SMALL_CRACKED_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
+    public static final Block GLAZED_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
+    public static final Block CRACKED_GLAZED_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
     public static final Block LIGHT_BLUE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
     public static final Block CRACKED_LIGHT_BLUE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
     public static final Block MOSSY_LIGHT_BLUE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
@@ -91,7 +95,6 @@ public class NSE_Blocks {
     public static final Block CRACKED_GREEN_WHITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
     public static final Block MOSSY_GREEN_WHITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
 
-    // TODO: There are far more of these
     public static final Block TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF));
     public static final Block CRACKED_TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF));
     public static final Block MOSSY_TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF));
@@ -212,7 +215,11 @@ public class NSE_Blocks {
         register("light_blue_tiles", () -> LIGHT_BLUE_TILES, NSE_TAB);
         register("cracked_light_blue_tiles", () -> CRACKED_LIGHT_BLUE_TILES, NSE_TAB);
         register("mossy_light_blue_tiles", () -> MOSSY_LIGHT_BLUE_TILES, NSE_TAB);
+        register("small_light_blue_tiles", () -> SMALL_LIGHT_BLUE_TILES, NSE_TAB);
+        register("small_cracked_light_blue_tiles", () -> SMALL_CRACKED_LIGHT_BLUE_TILES, NSE_TAB);
         register("light_blue_bricks", () -> LIGHT_BLUE_BRICKS, NSE_TAB);
+        register("glazed_light_blue_tiles", () -> GLAZED_LIGHT_BLUE_TILES, NSE_TAB);
+        register("cracked_glazed_light_blue_tiles", () -> CRACKED_GLAZED_LIGHT_BLUE_TILES, NSE_TAB);
         register("cracked_light_blue_bricks", () -> CRACKED_LIGHT_BLUE_BRICKS, NSE_TAB);
         register("mossy_light_blue_bricks", () -> MOSSY_LIGHT_BLUE_BRICKS, NSE_TAB);
         register("big_granite_tiles", () -> BIG_GRANITE_TILES, NSE_TAB);

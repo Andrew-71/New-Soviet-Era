@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "new_soviet:block/light_blue/cracked_light_blue_tiles",
+    "particle": "new_soviet:block/light_blue/cracked_light_blue_tiles"
+  }
+}
+
