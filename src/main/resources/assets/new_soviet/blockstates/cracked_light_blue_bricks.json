@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "": [{
+      "model": "new_soviet:block/cracked_light_blue_bricks_1"
+    },
+    {
+      "model": "new_soviet:block/cracked_light_blue_bricks_2"
+    },
+    {
+      "model": "new_soviet:block/cracked_light_blue_bricks_3"
+    }]
+  }
+}
