@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "new_soviet:block/tuff/mossy_tuff_bricks",
+    "particle": "new_soviet:block/tuff/mossy_tuff_bricks"
+
+  }
+}
+

@@ -1,3 +1,15 @@
 {
-
+  "itemGroup.new_soviet.building_blocks": "Soviet Building Blocks",
+  "block.new_soviet.sand_tiles": "Sand Tiles",
+  "block.new_soviet.mossy_sand_tiles": "Mossy Sand Tiles",
+  "block.new_soviet.cracked_sand_tiles": "Cracked Sand Tiles",
+  "block.new_soviet.small_sand_tiles": "Small Sand Tiles",
+  "block.new_soviet.small_cracked_sand_tiles": "Small Cracked Sand Tiles",
+  "block.new_soviet.herringbone_sand_tiles": "Herringbone Sand Tiles",
+  "block.new_soviet.cross_sand_tiles": "Cross Sand Tiles",
+  "block.new_soviet.big_sand_tiles": "Big Sand Tiles",
+  "block.new_soviet.sand_bricks": "Sand Bricks",
+  "block.new_soviet.mossy_sand_bricks": "Mossy Sand Bricks",
+  "block.new_soviet.cracked_sand_bricks": "Cracked Sand Bricks",
+  "block.new_soviet.big_sand_bricks": "Big Sand Bricks"
 }
