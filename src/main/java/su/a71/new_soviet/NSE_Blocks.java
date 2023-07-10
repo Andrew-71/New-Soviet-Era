@@ -108,6 +108,16 @@ public class NSE_Blocks {
     public static final Block INDUSTRIAL_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
     public static final Block RED_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
     public static final Block ORANGE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
+    public static final Block YELLOW_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
+    public static final Block CYAN_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
+    public static final Block LIGHT_BLUE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
+    public static final Block BLUE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
+    public static final Block LIME_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
+    public static final Block GREEN_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
+    public static final Block GRAY_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
+    public static final Block PURPLE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
+    public static final Block MAGENTA_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
+
     public static final Block METAL_PLATING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
     public static final WallBlock CONCRETE_WALL = new WallBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
 
@@ -238,8 +248,18 @@ public class NSE_Blocks {
         register("mossy_tuff_bricks", () -> MOSSY_TUFF_BRICKS, NSE_TAB);
 
         register("industrial_warning", () -> INDUSTRIAL_WARNING, NSE_TAB);
+        register("gray_warning", () -> GRAY_WARNING, NSE_TAB);
         register("red_warning", () -> RED_WARNING, NSE_TAB);
         register("orange_warning", () -> ORANGE_WARNING, NSE_TAB);
+        register("yellow_warning", () -> YELLOW_WARNING, NSE_TAB);
+        register("lime_warning", () -> LIME_WARNING, NSE_TAB);
+        register("green_warning", () -> GREEN_WARNING, NSE_TAB);
+        register("cyan_warning", () -> CYAN_WARNING, NSE_TAB);
+        register("light_blue_warning", () -> LIGHT_BLUE_WARNING, NSE_TAB);
+        register("blue_warning", () -> BLUE_WARNING, NSE_TAB);
+        register("purple_warning", () -> PURPLE_WARNING, NSE_TAB);
+        register("magenta_warning", () -> MAGENTA_WARNING, NSE_TAB);
+
         register("metal_plating", () -> METAL_PLATING, NSE_TAB);
         register("concrete_wall", () -> CONCRETE_WALL, NSE_TAB);  // TODO: Broken
 
