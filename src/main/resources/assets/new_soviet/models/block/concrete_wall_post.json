@@ -1,6 +1,22 @@
 {
-  "parent": "minecraft:block/template_wall_post",
+  "credit": "Made by Feulim (karoter2)",
   "textures": {
-    "wall": "new_soviet:block/industrial/concrete_wall"
-  }
+    "1": "new_soviet:block/industrial/po_2_wall/po2_pillar",
+    "particle": "new_soviet:block/industrial/po_2_wall/po2"
+  },
+  "elements": [
+    {
+      "name": "Center post",
+      "from": [4, 0, 4],
+      "to": [12, 16, 12],
+      "faces": {
+        "north": {"uv": [0, 0, 8, 16], "texture": "#1"},
+        "east": {"uv": [0, 0, 8, 16], "texture": "#1"},
+        "south": {"uv": [0, 0, 8, 16], "texture": "#1"},
+        "west": {"uv": [0, 0, 8, 16], "texture": "#1"},
+        "up": {"uv": [8, 0, 16, 8], "texture": "#1", "cullface": "up"},
+        "down": {"uv": [8, 8, 16, 16], "texture": "#1", "cullface": "down"}
+      }
+    }
+  ]
 }

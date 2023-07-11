@@ -1,6 +1,81 @@
 {
-  "parent": "minecraft:block/wall_inventory",
+  "credit": "Made by Feulim (karoter2)",
+  "parent": "block/block",
+  "ambientocclusion": false,
   "textures": {
-    "wall": "new_soviet:block/industrial/concrete_wall"
+    "0": "new_soviet:block/industrial/po_2_wall/po2",
+    "1": "new_soviet:block/industrial/po_2_wall/po2_pillar",
+    "2": "new_soviet:block/industrial/po_2_wall/po2_side",
+    "particle": "new_soviet:block/industrial/po_2_wall/po2"
+  },
+  "elements": [
+    {
+      "name": "Center post",
+      "from": [4, 0, 4],
+      "to": [12, 16, 12],
+      "faces": {
+        "north": {"uv": [0, 0, 8, 16], "texture": "#1"},
+        "east": {"uv": [0, 0, 8, 16], "texture": "#1"},
+        "south": {"uv": [0, 0, 8, 16], "texture": "#1"},
+        "west": {"uv": [0, 0, 8, 16], "texture": "#1"},
+        "up": {"uv": [8, 0, 16, 8], "texture": "#1"},
+        "down": {"uv": [8, 8, 16, 16], "texture": "#1", "cullface": "down"}
+      }
+    },
+    {
+      "name": "Full wall",
+      "from": [5, 0.1, 0],
+      "to": [11, 15.1, 8],
+      "faces": {
+        "north": {"uv": [4, 1, 10, 16], "texture": "#2", "cullface": "north"},
+        "east": {"uv": [0, 1, 8, 16], "texture": "#0"},
+        "south": {"uv": [4, 1, 10, 16], "texture": "#2", "cullface": "south"},
+        "west": {"uv": [0, 1, 8, 16], "texture": "#0"},
+        "up": {"uv": [4, 0, 10, 8], "texture": "#0"},
+        "down": {"uv": [5, 7, 11, 16], "texture": "#0", "cullface": "down"}
+      }
+    },
+    {
+      "name": "Full wall",
+      "from": [5, 0.1, 8],
+      "to": [11, 15.1, 16],
+      "faces": {
+        "north": {"uv": [4, 1, 10, 16], "texture": "#2", "cullface": "north"},
+        "east": {"uv": [8, 1, 16, 16], "texture": "#0"},
+        "south": {"uv": [4, 1, 10, 16], "texture": "#2", "cullface": "south"},
+        "west": {"uv": [8, 1, 16, 16], "texture": "#0"},
+        "up": {"uv": [4, 0, 10, 8], "texture": "#0"},
+        "down": {"uv": [5, 7, 11, 16], "texture": "#0", "cullface": "down"}
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [0.98, 17.93, -7.15],
+      "scale": [0.4, 0.4, 0.4]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [3.15, 27.95, -12.71],
+      "scale": [0.4, 0.4, 0.4]
+    },
+    "firstperson_righthand": {
+      "translation": [0.75, 0, 0],
+      "scale": [0.4, 0.4, 0.4]
+    },
+    "firstperson_lefthand": {
+      "translation": [3.25, 0, 0],
+      "scale": [0.4, 0.4, 0.41]
+    },
+    "ground": {
+      "scale": [0.4, 0.4, 0.4]
+    },
+    "gui": {
+      "rotation": [30, 135, 0],
+      "scale": [0.625, 0.625, 0.625]
+    },
+    "fixed": {
+      "rotation": [0, 90, 0],
+      "scale": [0.5, 0.5, 0.5]
+    }
   }
 }

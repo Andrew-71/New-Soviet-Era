@@ -1,0 +1,69 @@
+{
+  "credit": "Made by Feulim (karoter2)",
+  "texture_size": [32, 32],
+  "textures": {
+    "0": "new_soviet:item/sickle",
+    "particle": "new_soviet:item/sickle"
+  },
+  "elements": [
+    {
+      "from": [7, 0, 7],
+      "to": [9, 7, 9],
+      "faces": {
+        "north": {"uv": [6.5, 0, 7.5, 3.5], "texture": "#0"},
+        "east": {"uv": [6.5, 3.5, 7.5, 7], "texture": "#0"},
+        "south": {"uv": [6.5, 7, 7.5, 10.5], "texture": "#0"},
+        "west": {"uv": [7.5, 0, 8.5, 3.5], "texture": "#0"},
+        "up": {"uv": [8.5, 4.5, 7.5, 3.5], "texture": "#0"},
+        "down": {"uv": [8.5, 4.5, 7.5, 5.5], "texture": "#0"}
+      }
+    },
+    {
+      "from": [8, 7, 1.5],
+      "to": [8, 20, 14.5],
+      "faces": {
+        "north": {"uv": [0, 0, 0, 6.5], "texture": "#0"},
+        "east": {"uv": [0, 0, 6.5, 6.5], "texture": "#0"},
+        "south": {"uv": [0, 0, 0, 6.5], "texture": "#0"},
+        "west": {"uv": [6.5, 0, 0, 6.5], "texture": "#0"},
+        "up": {"uv": [0, 6.5, 0, 0], "texture": "#0"},
+        "down": {"uv": [0, 0, 0, 6.5], "texture": "#0"}
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [0, 11, 0],
+      "translation": [0, 2.25, 0]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [0, 7, 0],
+      "translation": [0, 2, 0]
+    },
+    "firstperson_righthand": {
+      "rotation": [-14, 11, -25],
+      "translation": [1.25, 0, -3.5]
+    },
+    "firstperson_lefthand": {
+      "rotation": [-7, 5, -5],
+      "translation": [0, 0, -2]
+    },
+    "ground": {
+      "rotation": [0, 0, 90],
+      "translation": [0, -2, 0],
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "gui": {
+      "rotation": [85, 51, -90],
+      "translation": [-2.25, -1.25, 0],
+      "scale": [0.8, 0.8, 0.8]
+    },
+    "head": {
+      "translation": [0, 12.75, 0]
+    },
+    "fixed": {
+      "rotation": [0, 90, 0],
+      "translation": [0, -1.75, 0]
+    }
+  }
+}

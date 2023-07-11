@@ -1,5 +1,6 @@
 {
   "itemGroup.new_soviet.building_blocks": "Soviet Building Blocks",
+  "itemGroup.new_soviet.items": "Soviet Items",
   "block.new_soviet.sand_tiles": "Sand Tiles",
   "block.new_soviet.cracked_sand_tiles": "Cracked Sand Tiles",
   "block.new_soviet.mossy_sand_tiles": "Mossy Sand Tiles",
@@ -79,12 +80,12 @@
   "block.new_soviet.lime_warning": "Lime Warning Stripes",
   "block.new_soviet.green_warning": "Green Warning Stripes",
   "block.new_soviet.cyan_warning": "Cyan Warning Stripes",
-  "block.new_soviet.light_blue_warning": "Light Blue Warning",
+  "block.new_soviet.light_blue_warning": "Light Blue Warning Stripes",
   "block.new_soviet.blue_warning": "Blue Warning Stripes",
   "block.new_soviet.purple_warning": "Purple Warning Stripes",
   "block.new_soviet.magenta_warning": "Magenta Warning Stripes",
   "block.new_soviet.metal_plating": "Metal Plating Block",
-  "block.new_soviet.concrete_wall": "Concrete Wall",
+  "block.new_soviet.concrete_wall": "PO-2 Wall",
   "block.new_soviet.herringbone_acacia_planks": "Herringbone Acacia Planks",
   "block.new_soviet.cross_acacia_planks": "Cross Acacia Planks",
   "block.new_soviet.herringbone_oak_planks": "Herringbone Oak Planks",
@@ -112,5 +113,7 @@
   "block.new_soviet.brown_linoleum": "Brown Linoleum",
   "block.new_soviet.cyan_linoleum": "Cyan Linoleum",
   "block.new_soviet.cross_orange_linoleum": "Cross Orange Linoleum",
-  "block.new_soviet.cross_brown_linoleum": "Cross Brown Linoleum"
+  "block.new_soviet.cross_brown_linoleum": "Cross Brown Linoleum",
+  "item.new_soviet.sickle": "Sickle",
+  "item.new_soviet.coconut": "Coconut"
 }

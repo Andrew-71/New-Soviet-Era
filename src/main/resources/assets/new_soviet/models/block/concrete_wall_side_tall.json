@@ -1,6 +1,21 @@
 {
-  "parent": "minecraft:block/template_wall_side_tall",
+  "credit": "Made by Feulim (karoter2)",
   "textures": {
-    "wall": "new_soviet:block/industrial/concrete_wall"
-  }
+    "0": "new_soviet:block/industrial/po_2_wall/po2",
+    "1": "new_soviet:block/industrial/po_2_wall/po2_side",
+    "particle": "new_soviet:block/industrial/po_2_wall/po2"
+  },
+  "elements": [
+    {
+      "from": [5, 0, 0],
+      "to": [11, 16, 8],
+      "faces": {
+        "north": {"uv": [10, 0, 16, 16], "texture": "#1", "cullface": "north"},
+        "east": {"uv": [8, 0, 16, 16], "texture": "#0"},
+        "west": {"uv": [0, 0, 8, 16], "texture": "#0"},
+        "up": {"uv": [4, 7, 10, 15], "texture": "#0", "cullface": "up"},
+        "down": {"uv": [5, 8, 11, 16], "texture": "#0", "cullface": "down"}
+      }
+    }
+  ]
 }
