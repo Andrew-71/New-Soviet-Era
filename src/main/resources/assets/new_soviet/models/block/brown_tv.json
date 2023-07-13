@@ -1,0 +1,7 @@
+{
+	"parent": "new_soviet:block/tv",
+	"textures": {
+		"0": "new_soviet:block/custom/brown_television",
+		"particle": "new_soviet:block/custom/brown_television"
+	}
+}

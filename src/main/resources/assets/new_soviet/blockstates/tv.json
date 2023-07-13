@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "new_soviet:block/tv", "uvlock": true },
+    "facing=east":  { "model": "new_soviet:block/tv", "y":  90, "uvlock": false },
+    "facing=south": { "model": "new_soviet:block/tv", "y": 180, "uvlock": false },
+    "facing=west":  { "model": "new_soviet:block/tv", "y": 270, "uvlock": false }
+  }
+}

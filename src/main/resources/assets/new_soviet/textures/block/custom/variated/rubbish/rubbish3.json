@@ -1,0 +1,119 @@
+{
+	"credit": "Designed by Pavel Durov with Cubik Studio - https://cubik.studio",
+	"parent": "block/cube_all",
+	"texture_size": [32, 32],
+	"textures": {
+		"6": "rubbish1",
+		"particle": "soviet:blocks/cracked_beton"
+	},
+	"elements": [
+		{
+			"name": "Cube1",
+			"from": [7.7, 0, 6.425],
+			"to": [15.7, 1, 7.425],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 2.5]},
+			"faces": {
+				"north": {"uv": [0.5, 6.5, 4.5, 7], "texture": "#6"},
+				"east": {"uv": [0, 6.5, 0.5, 7], "texture": "#6"},
+				"south": {"uv": [5, 6.5, 9, 7], "texture": "#6"},
+				"west": {"uv": [4.5, 6.5, 5, 7], "texture": "#6"},
+				"up": {"uv": [4.5, 6.5, 0.5, 6], "texture": "#6"},
+				"down": {"uv": [8.5, 6, 4.5, 6.5], "texture": "#6"}
+			}
+		},
+		{
+			"name": "Cube1",
+			"from": [1.15016, 0, 8.3951],
+			"to": [8.15016, 1, 9.3951],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [7, 0, 10.5]},
+			"faces": {
+				"north": {"uv": [6.5, 4, 10, 4.5], "texture": "#6"},
+				"east": {"uv": [6, 4, 6.5, 4.5], "texture": "#6"},
+				"south": {"uv": [10.5, 4, 14, 4.5], "texture": "#6"},
+				"west": {"uv": [10, 4, 10.5, 4.5], "texture": "#6"},
+				"up": {"uv": [10, 4, 6.5, 3.5], "texture": "#6"},
+				"down": {"uv": [13.5, 3.5, 10, 4], "texture": "#6"}
+			}
+		},
+		{
+			"name": "Cube1",
+			"from": [4.5, 0, 5.5],
+			"to": [9.5, 1, 6.5],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [5, 0, 6.5]},
+			"faces": {
+				"north": {"uv": [5.5, 7.5, 8, 8], "texture": "#6"},
+				"east": {"uv": [5, 7.5, 5.5, 8], "texture": "#6"},
+				"south": {"uv": [8.5, 7.5, 11, 8], "texture": "#6"},
+				"west": {"uv": [8, 7.5, 8.5, 8], "texture": "#6"},
+				"up": {"uv": [8, 7.5, 5.5, 7], "rotation": 270, "texture": "#6"},
+				"down": {"uv": [10.5, 7, 8, 7.5], "rotation": 90, "texture": "#6"}
+			}
+		},
+		{
+			"name": "Cube1",
+			"from": [10.5, 0, 12],
+			"to": [16.5, 1, 13],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [12, 0, 9]},
+			"faces": {
+				"north": {"uv": [5, 7.5, 8, 8], "texture": "#6"},
+				"east": {"uv": [4.5, 7.5, 5, 8], "texture": "#6"},
+				"south": {"uv": [8.5, 7.5, 11.5, 8], "texture": "#6"},
+				"west": {"uv": [8, 7.5, 8.5, 8], "texture": "#6"},
+				"up": {"uv": [8, 7.5, 5, 7], "rotation": 180, "texture": "#6"},
+				"down": {"uv": [11, 7, 8, 7.5], "rotation": 180, "texture": "#6"}
+			}
+		},
+		{
+			"name": "group",
+			"from": [12, -1, 8],
+			"to": [15, 1, 11],
+			"faces": {
+				"north": {"uv": [1.5, 8.5, 3, 9.5], "texture": "#6"},
+				"east": {"uv": [0, 8.5, 1.5, 9.5], "texture": "#6"},
+				"south": {"uv": [4.5, 8.5, 6, 9.5], "texture": "#6"},
+				"west": {"uv": [3, 8.5, 4.5, 9.5], "texture": "#6"},
+				"up": {"uv": [3, 8.5, 1.5, 7], "texture": "#6"},
+				"down": {"uv": [4.5, 7, 3, 8.5], "texture": "#6"}
+			}
+		},
+		{
+			"name": "group",
+			"from": [9, -1, 1],
+			"to": [12, 1, 4],
+			"faces": {
+				"north": {"uv": [1.5, 8.5, 3, 9.5], "texture": "#6"},
+				"east": {"uv": [0, 8.5, 1.5, 9.5], "texture": "#6"},
+				"south": {"uv": [4.5, 8.5, 6, 9.5], "texture": "#6"},
+				"west": {"uv": [3, 8.5, 4.5, 9.5], "texture": "#6"},
+				"up": {"uv": [3, 8.5, 1.5, 7], "texture": "#6"},
+				"down": {"uv": [4.5, 7, 3, 8.5], "texture": "#6"}
+			}
+		},
+		{
+			"name": "group",
+			"from": [4, -0.5, 11],
+			"to": [8, 1.5, 15],
+			"faces": {
+				"north": {"uv": [2, 5, 4, 6], "texture": "#6"},
+				"east": {"uv": [0, 5, 2, 6], "texture": "#6"},
+				"south": {"uv": [6, 5, 8, 6], "texture": "#6"},
+				"west": {"uv": [4, 5, 6, 6], "texture": "#6"},
+				"up": {"uv": [4, 5, 2, 3], "texture": "#6"},
+				"down": {"uv": [6, 3, 4, 5], "texture": "#6"}
+			}
+		},
+		{
+			"name": "group",
+			"from": [1, -1, 1],
+			"to": [6, 1, 5],
+			"faces": {
+				"north": {"uv": [2, 2, 4.5, 3], "texture": "#6"},
+				"east": {"uv": [0, 2, 2, 3], "texture": "#6"},
+				"south": {"uv": [6.5, 2, 9, 3], "texture": "#6"},
+				"west": {"uv": [4.5, 2, 6.5, 3], "texture": "#6"},
+				"up": {"uv": [4.5, 2, 2, 0], "texture": "#6"},
+				"down": {"uv": [7, 0, 4.5, 2], "texture": "#6"}
+			}
+		}
+	]
+}

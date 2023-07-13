@@ -22,5 +22,6 @@ public class NewSoviet implements ModInitializer {
     public void onInitialize() {
         NSE_Blocks.init();
         NSE_Items.init();
+        NSE_Custom.init();
     }
 }

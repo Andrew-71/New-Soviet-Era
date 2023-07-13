@@ -13,11 +13,14 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "All rights reserved",
-	"icon": "assets/modid/icon.png",
+	"icon": "assets/new_soviet/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"su.a71.new_soviet.NewSoviet"
+		],
+		"client": [
+			"su.a71.new_soviet.NewSovietClient"
 		]
 	},
 	"depends": {

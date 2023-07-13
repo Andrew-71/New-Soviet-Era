@@ -1,6 +1,7 @@
 {
   "itemGroup.new_soviet.building_blocks": "Soviet Building Blocks",
   "itemGroup.new_soviet.items": "Soviet Items",
+  "itemGroup.new_soviet.custom": "Soviet Additions",
   "block.new_soviet.sand_tiles": "Sand Tiles",
   "block.new_soviet.cracked_sand_tiles": "Cracked Sand Tiles",
   "block.new_soviet.mossy_sand_tiles": "Mossy Sand Tiles",
@@ -115,5 +116,9 @@
   "block.new_soviet.cross_orange_linoleum": "Cross Orange Linoleum",
   "block.new_soviet.cross_brown_linoleum": "Cross Brown Linoleum",
   "item.new_soviet.sickle": "Sickle",
-  "item.new_soviet.coconut": "Coconut"
+  "item.new_soviet.coconut": "Coconut",
+  "block.new_soviet.tv": "TV",
+  "block.new_soviet.red_tv": "Red TV",
+  "block.new_soviet.brown_tv": "Brown TV",
+  "block.new_soviet.radio": "Radio"
 }

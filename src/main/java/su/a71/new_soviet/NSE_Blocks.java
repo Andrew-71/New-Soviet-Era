@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.BarrelBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.WallBlock;
 import net.minecraft.item.BlockItem;
@@ -119,6 +120,7 @@ public class NSE_Blocks {
     public static final Block MAGENTA_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
 
     public static final Block METAL_PLATING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
+    public static final Block CRATE = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).nonOpaque());
     public static final WallBlock CONCRETE_WALL = new WallBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
 
     // WOOD/FLOOR ======
@@ -261,6 +263,7 @@ public class NSE_Blocks {
         register("magenta_warning", () -> MAGENTA_WARNING, NSE_BUILDING_TAB);
 
         register("metal_plating", () -> METAL_PLATING, NSE_BUILDING_TAB);
+        register("crate", () -> CRATE, NSE_BUILDING_TAB);
         register("concrete_wall", () -> CONCRETE_WALL, NSE_BUILDING_TAB);  // TODO: Broken
 
         register("herringbone_acacia_planks", () -> HERRINGBONE_ACACIA_PLANKS, NSE_BUILDING_TAB);

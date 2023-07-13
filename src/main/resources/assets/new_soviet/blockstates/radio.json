@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "new_soviet:block/radio", "uvlock": true },
+    "facing=east":  { "model": "new_soviet:block/radio", "y":  90, "uvlock": false },
+    "facing=south": { "model": "new_soviet:block/radio", "y": 180, "uvlock": false },
+    "facing=west":  { "model": "new_soviet:block/radio", "y": 270, "uvlock": false }
+  }
+}
