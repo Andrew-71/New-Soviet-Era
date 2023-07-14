@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "new_soviet:block/custom/television",
-		"particle": "new_soviet:block/custom/television"
+		"0": "new_soviet:block/custom/electronics/television",
+		"particle": "new_soviet:block/custom/electronics/television"
 	},
 	"elements": [
 		{

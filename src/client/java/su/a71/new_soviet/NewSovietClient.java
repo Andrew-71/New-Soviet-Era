@@ -12,5 +12,8 @@ public class NewSovietClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(NSE_Blocks.CRATE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(NSE_Custom.LAMP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(NSE_Custom.CEILING_FAN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(NSE_Custom.SIREN, RenderLayer.getCutout());
     }
 }

@@ -3,7 +3,7 @@ package su.a71.new_soviet;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
@@ -11,10 +11,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import su.a71.new_soviet.blocks.RadioBlock;
-import su.a71.new_soviet.blocks.TVBlock;
+import su.a71.new_soviet.blocks.*;
 
 import java.util.Optional;
 import java.util.function.Supplier;
@@ -24,8 +24,12 @@ public class NSE_Custom {
     public static final TVBlock TV = new TVBlock();
     public static final TVBlock RED_TV = new TVBlock();
     public static final TVBlock BROWN_TV = new TVBlock();
-
     public static final RadioBlock RADIO = new RadioBlock();
+    public static final LampBlock LAMP = new LampBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.LANTERN));
+    public static final CeilingFanBlock CEILING_FAN = new CeilingFanBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
+
+    public static final AirRaidBlock SIREN = new AirRaidBlock();
+
 
     private static final ItemGroup NSE_CUSTOM_TAB = FabricItemGroup.builder()
             .icon(() -> new ItemStack(TV))
@@ -50,5 +54,9 @@ public class NSE_Custom {
         register("red_tv", () -> RED_TV, NSE_CUSTOM_TAB);
         register("brown_tv", () -> BROWN_TV, NSE_CUSTOM_TAB);
         register("radio", () -> RADIO, NSE_CUSTOM_TAB);
+        register("lamp", () -> LAMP, NSE_CUSTOM_TAB);
+        register("ceiling_fan", () -> CEILING_FAN, NSE_CUSTOM_TAB);
+        register("siren", () -> SIREN, NSE_CUSTOM_TAB);
+
     }
 }

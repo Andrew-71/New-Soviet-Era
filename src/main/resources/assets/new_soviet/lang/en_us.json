@@ -120,5 +120,9 @@
   "block.new_soviet.tv": "TV",
   "block.new_soviet.red_tv": "Red TV",
   "block.new_soviet.brown_tv": "Brown TV",
-  "block.new_soviet.radio": "Radio"
+  "block.new_soviet.radio": "Radio",
+  "block.new_soviet.lamp": "Lamp",
+  "block.new_soviet.ceiling_fan": "Ceiling Fan",
+  "block.new_soviet.siren": "Siren"
+
 }

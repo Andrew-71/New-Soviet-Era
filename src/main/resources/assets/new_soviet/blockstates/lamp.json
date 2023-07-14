@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "new_soviet:block/table_lamp"
+    },
+    "hanging=true": {
+      "model": "new_soviet:block/ceiling_lamp"
+    }
+  }
+}

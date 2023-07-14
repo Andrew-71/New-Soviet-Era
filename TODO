@@ -4,3 +4,7 @@
 4. Generate/Write crafting recipes
 5. Fix PO2 wall
 6. Work on custom blocks and doors, etc.
+7. Fix lamp (upside down when placed, too big when hanging, uses voxelshape of a lantern)
+8. Better organise industrial and custom texture folders.
+9. Possibly make all NSE_<type> into a generic class with inheritance (for registration functions)
+10. Decide on block hardness and blast resistance for all block types

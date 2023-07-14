@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "ceiling_lamp",
-		"particle": "ceiling_lamp"
+		"0": "new_soviet:block/custom/furniture/ceiling_lamp",
+		"particle": "new_soviet:block/custom/furniture/ceiling_lamp"
 	},
 	"elements": [
 		{

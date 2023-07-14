@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "C:/Users/Yura/Desktop/van_animated",
-		"1": "C:/Users/Yura/Desktop/fan_base",
-		"particle": "C:/Users/Yura/Desktop/van_animated"
+		"0": "new_soviet:block/custom/appliances/fan_animated",
+		"1": "new_soviet:block/custom/appliances/fan_base",
+		"particle": "new_soviet:block/custom/appliances/fan_animated"
 	},
 	"elements": [
 		{
