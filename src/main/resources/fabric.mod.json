@@ -21,6 +21,9 @@
 		],
 		"client": [
 			"su.a71.new_soviet.NewSovietClient"
+		],
+		"fabric-datagen": [
+			"su.a71.new_soviet.DataGeneration"
 		]
 	},
 	"depends": {
