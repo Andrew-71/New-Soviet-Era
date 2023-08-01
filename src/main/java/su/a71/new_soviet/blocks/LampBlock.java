@@ -34,11 +34,8 @@ public class LampBlock extends Block implements Waterloggable {
     @Nullable
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
-        Direction[] var3 = ctx.getPlacementDirections();
-        int var4 = var3.length;
-
-        for (int var5 = 0; var5 < var4; ++var5) {
-            Direction direction = var3[var5];
+        Direction[] directions = ctx.getPlacementDirections();
+        for (Direction direction : directions) {
             if (direction.getAxis() == Direction.Axis.Y) {
                 BlockState blockState = this.getDefaultState().with(HANGING, direction == Direction.UP);
                 if (blockState.canPlaceAt(ctx.getWorld(), ctx.getBlockPos())) {
@@ -46,12 +43,11 @@ public class LampBlock extends Block implements Waterloggable {
                 }
             }
         }
-
         return null;
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return (Boolean) state.get(HANGING) ? HANGING_SHAPE : STANDING_SHAPE;
+        return state.get(HANGING) ? HANGING_SHAPE : STANDING_SHAPE;
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
@@ -64,11 +60,11 @@ public class LampBlock extends Block implements Waterloggable {
     }
 
     protected static Direction attachedDirection(BlockState state) {
-        return (Boolean) state.get(HANGING) ? Direction.DOWN : Direction.UP;
+        return state.get(HANGING) ? Direction.DOWN : Direction.UP;
     }
 
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        if ((Boolean) state.get(WATERLOGGED)) {
+        if (state.get(WATERLOGGED)) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
 
@@ -76,7 +72,7 @@ public class LampBlock extends Block implements Waterloggable {
     }
 
     public FluidState getFluidState(BlockState state) {
-        return (Boolean) state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
@@ -88,17 +84,17 @@ public class LampBlock extends Block implements Waterloggable {
         shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.34375, -0.221875, 0.34375, 0.65625, 0.090625, 0.65625));
         shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.125, 0.0625, 0.125, 0.875, 0.4375, 0.875));
         shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.5, 0.5, 0.125, 0.5, 0.875, 0.875));
-        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.09375, 0.4375, 0.09375, 0.90625, 0.5, 0.15625));
-        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.4375, 0.875, 0.4375, 0.5625, 0.90625, 0.5625));
+        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.125, 0.5, 0.5, 0.875, 0.875, 0.5));
         shape.simplify();
         return shape;
     }
 
     public static VoxelShape getStandingShape(){
         VoxelShape shape = VoxelShapes.empty();
-        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.1875, 0.4375, 0.1875, 0.8125, 1.0625, 0.8125));
-        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.375, 0, 0.375, 0.625, 0.25, 0.625));
         shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.4375, 0.25, 0.4375, 0.5625, 0.875, 0.5625));
+        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.375, 0, 0.375, 0.625, 0.25, 0.625));
+        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.25, 0.6875, 0.25, 0.75, 0.9375, 0.75));
+        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.125, 0.3125, 0.125, 0.875, 0.6875, 0.875));
         shape.simplify();
         return shape;
     }

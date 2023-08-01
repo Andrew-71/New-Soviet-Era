@@ -31,14 +31,11 @@ public class TVBlock extends HorizontalFacingBlock {
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
         Direction dir = state.get(FACING);
-        switch(dir) {
-            case NORTH, SOUTH:
-                return VoxelShapes.cuboid(0.0f, 0.0f, 0.1875f, 1.0f, 0.8125f, 0.8125f);
-            case EAST, WEST:
-                return VoxelShapes.cuboid(0.1875f, 0.0f, 0.0f, 0.8125f, 0.8125f, 1.0f);
-            default:
-                return VoxelShapes.fullCube();
-        }
+        return switch (dir) {
+            case NORTH, SOUTH -> VoxelShapes.cuboid(0.0f, 0.0f, 0.1875f, 1.0f, 0.8125f, 0.8125f);
+            case EAST, WEST -> VoxelShapes.cuboid(0.1875f, 0.0f, 0.0f, 0.8125f, 0.8125f, 1.0f);
+            default -> VoxelShapes.fullCube();
+        };
     }
 
     @Override

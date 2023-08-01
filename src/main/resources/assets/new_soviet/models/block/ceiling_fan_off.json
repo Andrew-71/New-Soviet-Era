@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "new_soviet:block/custom/appliances/fan_static",
 		"1": "new_soviet:block/custom/appliances/fan_base",
-		"particle": "new_soviet:block/custom/appliances/fan_static"
+		"2": "new_soviet:block/custom/appliances/fan_static",
+		"particle": "new_soviet:block/custom/appliances/fan_animated"
 	},
 	"elements": [
 		{
@@ -64,18 +64,53 @@
 			"from": [-8, 1, -8],
 			"to": [24, 1, 24],
 			"faces": {
-				"up": {"uv": [16, 16, 0, 0], "texture": "#0"},
-				"down": {"uv": [16, 0, 0, 16], "texture": "#0"}
+				"up": {"uv": [16, 16, 0, 0], "texture": "#2"},
+				"down": {"uv": [16, 0, 0, 16], "texture": "#2"}
 			}
 		}
 	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 0, 180],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 0, 180],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_righthand": {
+			"rotation": [-46, 0, 180],
+			"translation": [1.5, 0, 1.25],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-46, 0, 180],
+			"translation": [1.5, 0, 1.25],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"gui": {
+			"rotation": [45, 45, 0],
+			"translation": [0, 1.75, 0],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"head": {
+			"rotation": [0, 0, 180],
+			"translation": [0, 2.5, 0]
+		},
+		"fixed": {
+			"rotation": [90, 0, 0],
+			"translation": [0, 0, 4.75]
+		}
+	},
 	"groups": [
 		{
 			"name": "root",
 			"origin": [0, 0, 0],
 			"color": 0,
 			"nbt": "{}",
-			"armAnimationEnabled": false,
 			"children": [0, 1, 2, 3, 4]
 		}
 	]
