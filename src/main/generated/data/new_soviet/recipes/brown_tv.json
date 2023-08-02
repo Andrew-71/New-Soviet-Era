@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:brown_dye"
+    },
+    "G": {
+      "item": "minecraft:glass_pane"
+    },
+    "N": {
+      "item": "minecraft:iron_nugget"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "N N",
+    "DGD",
+    "DRD"
+  ],
+  "result": {
+    "item": "new_soviet:brown_tv"
+  },
+  "show_notification": true
+}

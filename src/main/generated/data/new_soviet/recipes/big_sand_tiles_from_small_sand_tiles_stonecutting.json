@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "new_soviet:small_sand_tiles"
+  },
+  "result": "new_soviet:big_sand_tiles"
+}

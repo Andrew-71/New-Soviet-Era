@@ -1,10 +1,7 @@
 package su.a71.new_soviet.blocks;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalFacingBlock;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.sound.BlockSoundGroup;
@@ -17,8 +14,8 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 
 public class TVBlock extends HorizontalFacingBlock {
-    public TVBlock() {
-        super(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).notSolid().pistonBehavior(PistonBehavior.DESTROY));
+    public TVBlock(AbstractBlock.Settings settings) {
+        super(settings.sounds(BlockSoundGroup.METAL).pistonBehavior(PistonBehavior.DESTROY).strength(1f, 2f));
         setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
     }
 

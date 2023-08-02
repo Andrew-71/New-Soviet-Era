@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "new_soviet:glazed_aquamarine_tiles"
+  },
+  "result": "new_soviet:small_aquamarine_tiles"
+}

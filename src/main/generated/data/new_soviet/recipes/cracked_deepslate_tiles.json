@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "new_soviet:deepslate_tiles"
+  },
+  "result": "new_soviet:cracked_deepslate_tiles"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "new_soviet:dripstone_bricks"
+  },
+  "result": "minecraft:dripstone_block"
+}

@@ -18,7 +18,7 @@ import net.minecraft.world.WorldView;
 
 public class AirRaidBlock extends HorizontalFacingBlock {
     public AirRaidBlock() {
-        super(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).notSolid().pistonBehavior(PistonBehavior.DESTROY));
+        super(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).notSolid().pistonBehavior(PistonBehavior.DESTROY).strength(1f, 2f));
         setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
     }
 

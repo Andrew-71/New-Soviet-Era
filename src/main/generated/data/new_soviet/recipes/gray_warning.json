@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "D": {
+      "item": "minecraft:gray_dye"
+    }
+  },
+  "pattern": [
+    "D#D",
+    "#D#",
+    "D#D"
+  ],
+  "result": {
+    "count": 4,
+    "item": "new_soviet:gray_warning"
+  },
+  "show_notification": true
+}

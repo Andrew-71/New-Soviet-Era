@@ -4,7 +4,9 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.MapColor;
 import net.minecraft.block.WallBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
@@ -22,137 +24,137 @@ import java.util.function.Supplier;
 public class NSE_Blocks {
 
     // BUILDING BRICKS/TILES ====================
-    public static final Block SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool());
-    public static final Block CRACKED_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool());
-    public static final Block MOSSY_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool());
-    public static final Block SMALL_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool());
-    public static final Block SMALL_CRACKED_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool());
-    public static final Block HERRINGBONE_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool());
-    public static final Block CROSS_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool());
-    public static final Block BIG_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool());
-    public static final Block SAND_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool());
-    public static final Block CRACKED_SAND_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool());
-    public static final Block MOSSY_SAND_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS));
-    public static final Block BIG_SAND_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool());
+    public static final Block SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block CRACKED_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block MOSSY_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block SMALL_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block SMALL_CRACKED_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block HERRINGBONE_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block CROSS_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block BIG_SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block SAND_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block CRACKED_SAND_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block MOSSY_SAND_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block BIG_SAND_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
 
-    public static final Block TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block CRACKED_TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block MOSSY_TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block SMALL_TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block SMALL_CRACKED_TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block GLAZED_TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block CRACKED_GLAZED_TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block VARIATED_TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool()); // TODO: name?
+    public static final Block TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TEAL));
+    public static final Block CRACKED_TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TEAL));
+    public static final Block MOSSY_TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TEAL));
+    public static final Block SMALL_TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TEAL));
+    public static final Block SMALL_CRACKED_TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TEAL));
+    public static final Block GLAZED_TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TEAL));
+    public static final Block CRACKED_GLAZED_TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TEAL));
+    public static final Block VARIATED_TEAL_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TEAL));
 
-    public static final Block AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block CRACKED_AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block MOSSY_AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block DIRTY_AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block SMALL_AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block SMALL_CRACKED_AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block GLAZED_AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block CRACKED_GLAZED_AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
+    public static final Block AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.DARK_AQUA));
+    public static final Block CRACKED_AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.DARK_AQUA));
+    public static final Block MOSSY_AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.DARK_AQUA));
+    public static final Block DIRTY_AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.DARK_AQUA));
+    public static final Block SMALL_AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.DARK_AQUA));
+    public static final Block SMALL_CRACKED_AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.DARK_AQUA));
+    public static final Block GLAZED_AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.DARK_AQUA));
+    public static final Block CRACKED_GLAZED_AQUAMARINE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.DARK_AQUA));
 
-    public static final Block SMALL_DIORITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block SMALL_CRACKED_DIORITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block BIG_DIORITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block DIORITE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block CRACKED_DIORITE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block MOSSY_DIORITE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
+    public static final Block SMALL_DIORITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.OFF_WHITE));
+    public static final Block SMALL_CRACKED_DIORITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.OFF_WHITE));
+    public static final Block BIG_DIORITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.OFF_WHITE));
+    public static final Block DIORITE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.OFF_WHITE));
+    public static final Block CRACKED_DIORITE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.OFF_WHITE));
+    public static final Block MOSSY_DIORITE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.OFF_WHITE));
 
-    public static final Block CALCITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.CALCITE).hardness(1.5f).requiresTool());
-    public static final Block CRACKED_CALCITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.CALCITE).hardness(1.5f).requiresTool());
-    public static final Block MOSSY_CALCITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.CALCITE).hardness(1.5f).requiresTool());
-    public static final Block DIAGONAL_CALCITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.CALCITE).hardness(1.5f).requiresTool());
+    public static final Block CALCITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.CALCITE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_WHITE));
+    public static final Block CRACKED_CALCITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.CALCITE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_WHITE));
+    public static final Block MOSSY_CALCITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.CALCITE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_WHITE));
+    public static final Block DIAGONAL_CALCITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.CALCITE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_WHITE));
 
-    public static final Block DRIPSTONE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DRIPSTONE_BLOCK).hardness(1.5f).requiresTool());
-    public static final Block CRACKED_DRIPSTONE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DRIPSTONE_BLOCK).hardness(1.5f).requiresTool());
-    public static final Block MOSSY_DRIPSTONE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DRIPSTONE_BLOCK).hardness(1.5f).requiresTool());
-    public static final Block DRIPSTONE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DRIPSTONE_BLOCK).hardness(1.5f).requiresTool());
+    public static final Block DRIPSTONE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DRIPSTONE_BLOCK).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block CRACKED_DRIPSTONE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DRIPSTONE_BLOCK).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block MOSSY_DRIPSTONE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DRIPSTONE_BLOCK).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final Block DRIPSTONE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DRIPSTONE_BLOCK).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
 
-    public static final Block DEEPSLATE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DEEPSLATE_TILES).hardness(3f).requiresTool());
-    public static final Block CRACKED_DEEPSLATE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DEEPSLATE_TILES).hardness(3f).requiresTool());
-    public static final Block MOSSY_DEEPSLATE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DEEPSLATE_TILES).hardness(3f).requiresTool());
-    public static final Block SMALL_DEEPSLATE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DEEPSLATE_TILES).hardness(3f).requiresTool());
-    public static final Block SMALL_CRACKED_DEEPSLATE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DEEPSLATE_TILES).hardness(3f).requiresTool());
-    public static final Block DIAGONAL_DEEPSLATE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DEEPSLATE_TILES).hardness(3f).requiresTool());
+    public static final Block DEEPSLATE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DEEPSLATE_TILES).hardness(3f).requiresTool().resistance(6f).mapColor(MapColor.DEEPSLATE_GRAY));
+    public static final Block CRACKED_DEEPSLATE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DEEPSLATE_TILES).hardness(3f).requiresTool().resistance(6f).mapColor(MapColor.DEEPSLATE_GRAY));
+    public static final Block MOSSY_DEEPSLATE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DEEPSLATE_TILES).hardness(3f).requiresTool().resistance(6f).mapColor(MapColor.DEEPSLATE_GRAY));
+    public static final Block SMALL_DEEPSLATE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DEEPSLATE_TILES).hardness(3f).requiresTool().resistance(6f).mapColor(MapColor.DEEPSLATE_GRAY));
+    public static final Block SMALL_CRACKED_DEEPSLATE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DEEPSLATE_TILES).hardness(3f).requiresTool().resistance(6f).mapColor(MapColor.DEEPSLATE_GRAY));
+    public static final Block DIAGONAL_DEEPSLATE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.DEEPSLATE_TILES).hardness(3f).requiresTool().resistance(6f).mapColor(MapColor.DEEPSLATE_GRAY));
 
-    public static final Block LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block CRACKED_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block MOSSY_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block SMALL_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block SMALL_CRACKED_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block GLAZED_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block CRACKED_GLAZED_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block LIGHT_BLUE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block CRACKED_LIGHT_BLUE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block MOSSY_LIGHT_BLUE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
+    public static final Block LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.LIGHT_BLUE));
+    public static final Block CRACKED_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.LIGHT_BLUE));
+    public static final Block MOSSY_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.LIGHT_BLUE));
+    public static final Block SMALL_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.LIGHT_BLUE));
+    public static final Block SMALL_CRACKED_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.LIGHT_BLUE));
+    public static final Block GLAZED_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.LIGHT_BLUE));
+    public static final Block CRACKED_GLAZED_LIGHT_BLUE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.LIGHT_BLUE));
+    public static final Block LIGHT_BLUE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.LIGHT_BLUE));
+    public static final Block CRACKED_LIGHT_BLUE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.LIGHT_BLUE));
+    public static final Block MOSSY_LIGHT_BLUE_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.LIGHT_BLUE));
 
-    public static final Block BIG_GRANITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block SMALL_GRANITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block SMALL_CRACKED_GRANITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
+    public static final Block BIG_GRANITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.DIRT_BROWN));
+    public static final Block SMALL_GRANITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.DIRT_BROWN));
+    public static final Block SMALL_CRACKED_GRANITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.DIRT_BROWN));
 
-    public static final Block GREEN_WHITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block CRACKED_GREEN_WHITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
-    public static final Block MOSSY_GREEN_WHITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool());
+    public static final Block GREEN_WHITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.OFF_WHITE));
+    public static final Block CRACKED_GREEN_WHITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.OFF_WHITE));
+    public static final Block MOSSY_GREEN_WHITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.OFF_WHITE));
 
-    public static final Block TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF).hardness(1.5f).requiresTool());
-    public static final Block CRACKED_TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF).hardness(1.5f).requiresTool());
-    public static final Block MOSSY_TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF).hardness(1.5f).requiresTool());
-    public static final Block BIG_TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF).hardness(1.5f).requiresTool());
-    public static final Block TUFF_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF).hardness(1.5f).requiresTool());
-    public static final Block CRACKED_TUFF_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF).hardness(1.5f).requiresTool());
-    public static final Block MOSSY_TUFF_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF).hardness(1.5f).requiresTool());
+    public static final Block TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_GRAY));
+    public static final Block CRACKED_TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_GRAY));
+    public static final Block MOSSY_TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_GRAY));
+    public static final Block BIG_TUFF_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_GRAY));
+    public static final Block TUFF_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_GRAY));
+    public static final Block CRACKED_TUFF_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_GRAY));
+    public static final Block MOSSY_TUFF_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_GRAY));
 
     // Industrial =====================================
-    public static final Block INDUSTRIAL_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).requiresTool());
-    public static final Block RED_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).requiresTool());
-    public static final Block ORANGE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).requiresTool());
-    public static final Block YELLOW_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).requiresTool());
-    public static final Block CYAN_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).requiresTool());
-    public static final Block LIGHT_BLUE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).requiresTool());
-    public static final Block BLUE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).requiresTool());
-    public static final Block LIME_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).requiresTool());
-    public static final Block GREEN_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).requiresTool());
-    public static final Block GRAY_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).requiresTool());
-    public static final Block PURPLE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).requiresTool());
-    public static final Block MAGENTA_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).requiresTool());
+    public static final Block INDUSTRIAL_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.BLACK));
+    public static final Block RED_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.RED));
+    public static final Block ORANGE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.ORANGE));
+    public static final Block YELLOW_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.YELLOW));
+    public static final Block CYAN_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.CYAN));
+    public static final Block LIGHT_BLUE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.LIGHT_BLUE));
+    public static final Block BLUE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.BLUE));
+    public static final Block LIME_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.LIME));
+    public static final Block GREEN_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.GREEN));
+    public static final Block GRAY_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.GRAY));
+    public static final Block PURPLE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.PURPLE));
+    public static final Block MAGENTA_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.MAGENTA));
 
-    public static final Block METAL_PLATING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(5f).requiresTool());
-    public static final Block CRATE = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).nonOpaque());
-    public static final WallBlock CONCRETE_WALL = new WallBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE));
+    public static final Block METAL_PLATING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(5f).requiresTool().mapColor(MapColor.IRON_GRAY));
+    public static final Block CRATE = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).nonOpaque().mapColor(MapColor.OAK_TAN));
+    public static final WallBlock CONCRETE_WALL = new WallBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).mapColor(MapColor.STONE_GRAY));
 
     // WOOD/FLOOR ======
-    public static final Block HERRINGBONE_ACACIA_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block CROSS_ACACIA_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block HERRINGBONE_OAK_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block CROSS_OAK_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block HERRINGBONE_BIRCH_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block CROSS_BIRCH_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block HERRINGBONE_CRIMSON_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block CROSS_CRIMSON_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block HERRINGBONE_DARK_OAK_PLAKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block CROSS_DARK_OAK_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block HERRINGBONE_JUNGLE_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block CROSS_JUNGLE_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block HERRINGBONE_MANGROVE_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block CROSS_MANGROVE_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block HERRINGBONE_SPRUCE_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block CROSS_SPRUCE_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
+    public static final Block HERRINGBONE_ACACIA_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.ORANGE));
+    public static final Block CROSS_ACACIA_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.ORANGE));
+    public static final Block HERRINGBONE_OAK_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.OAK_TAN));
+    public static final Block CROSS_OAK_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.OAK_TAN));
+    public static final Block HERRINGBONE_BIRCH_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.PALE_YELLOW));
+    public static final Block CROSS_BIRCH_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.PALE_YELLOW));
+    public static final Block HERRINGBONE_CRIMSON_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.DARK_CRIMSON));
+    public static final Block CROSS_CRIMSON_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.DARK_CRIMSON));
+    public static final Block HERRINGBONE_DARK_OAK_PLAKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.BROWN));
+    public static final Block CROSS_DARK_OAK_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.BROWN));
+    public static final Block HERRINGBONE_JUNGLE_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.DIRT_BROWN));
+    public static final Block CROSS_JUNGLE_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.DIRT_BROWN));
+    public static final Block HERRINGBONE_MANGROVE_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.RED));
+    public static final Block CROSS_MANGROVE_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.RED));
+    public static final Block HERRINGBONE_SPRUCE_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.SPRUCE_BROWN));
+    public static final Block CROSS_SPRUCE_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.SPRUCE_BROWN));
 
-    public static final Block HERRINGBONE_PARQUET = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block STRAIGHT_PARQUET = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block SEPARATED_PARQUET = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
+    public static final Block HERRINGBONE_PARQUET = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f));
+    public static final Block STRAIGHT_PARQUET = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f));
+    public static final Block SEPARATED_PARQUET = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f));
 
-    public static final Block GREEN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block BLUE_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block RED_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block GRAY_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block ORANGE_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block BROWN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block CYAN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block CROSS_ORANGE_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
-    public static final Block CROSS_BROWN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f));
+    public static final Block GREEN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f));
+    public static final Block BLUE_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f));
+    public static final Block RED_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f));
+    public static final Block GRAY_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f));
+    public static final Block ORANGE_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f));
+    public static final Block BROWN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f));
+    public static final Block CYAN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f));
+    public static final Block CROSS_ORANGE_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f));
+    public static final Block CROSS_BROWN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f));
 
     // Concrete
 
@@ -294,5 +296,40 @@ public class NSE_Blocks {
         register("cyan_linoleum", () -> CYAN_LINOLEUM, NSE_BUILDING_TAB);
         register("cross_orange_linoleum", () -> CROSS_ORANGE_LINOLEUM, NSE_BUILDING_TAB);
         register("cross_brown_linoleum", () -> CROSS_BROWN_LINOLEUM, NSE_BUILDING_TAB);
+    }
+
+    public static void initFlame() {
+        FlammableBlockRegistry flammableBlockRegistry = FlammableBlockRegistry.getDefaultInstance();
+        flammableBlockRegistry.add(HERRINGBONE_ACACIA_PLANKS, 20, 5);
+        flammableBlockRegistry.add(CROSS_ACACIA_PLANKS, 20, 5);
+        flammableBlockRegistry.add(HERRINGBONE_OAK_PLANKS, 20, 5);
+        flammableBlockRegistry.add(CROSS_OAK_PLANKS, 20, 5);
+        flammableBlockRegistry.add(HERRINGBONE_OAK_PLANKS, 20, 5);
+        flammableBlockRegistry.add(HERRINGBONE_BIRCH_PLANKS, 20, 5);
+        flammableBlockRegistry.add(CROSS_BIRCH_PLANKS, 20, 5);
+        flammableBlockRegistry.add(HERRINGBONE_CRIMSON_PLANKS, 20, 5);
+        flammableBlockRegistry.add(CROSS_CRIMSON_PLANKS, 20, 5);
+        flammableBlockRegistry.add(HERRINGBONE_DARK_OAK_PLAKS, 20, 5);
+        flammableBlockRegistry.add(CROSS_DARK_OAK_PLANKS, 20, 5);
+        flammableBlockRegistry.add(HERRINGBONE_JUNGLE_PLANKS, 20, 5);
+        flammableBlockRegistry.add(CROSS_JUNGLE_PLANKS, 20, 5);
+        flammableBlockRegistry.add(HERRINGBONE_MANGROVE_PLANKS, 20, 5);
+        flammableBlockRegistry.add(CROSS_MANGROVE_PLANKS, 20, 5);
+        flammableBlockRegistry.add(HERRINGBONE_SPRUCE_PLANKS, 20, 5);
+        flammableBlockRegistry.add(CROSS_SPRUCE_PLANKS, 20, 5);
+
+        flammableBlockRegistry.add(HERRINGBONE_PARQUET, 20, 5);
+        flammableBlockRegistry.add(STRAIGHT_PARQUET, 20, 5);
+        flammableBlockRegistry.add(SEPARATED_PARQUET, 20, 5);
+
+        flammableBlockRegistry.add(GREEN_LINOLEUM, 20, 5);
+        flammableBlockRegistry.add(BLUE_LINOLEUM, 20, 5);
+        flammableBlockRegistry.add(RED_LINOLEUM, 20, 5);
+        flammableBlockRegistry.add(GRAY_LINOLEUM, 20, 5);
+        flammableBlockRegistry.add(ORANGE_LINOLEUM, 20, 5);
+        flammableBlockRegistry.add(BROWN_LINOLEUM, 20, 5);
+        flammableBlockRegistry.add(CYAN_LINOLEUM, 20, 5);
+        flammableBlockRegistry.add(CROSS_ORANGE_LINOLEUM, 20, 5);
+        flammableBlockRegistry.add(CROSS_BROWN_LINOLEUM, 20, 5);
     }
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "X": {
+      "item": "minecraft:polished_diorite"
+    },
+    "Y": {
+      "item": "minecraft:green_dye"
+    }
+  },
+  "pattern": [
+    "XY",
+    "YX"
+  ],
+  "result": {
+    "count": 4,
+    "item": "new_soviet:green_white_tiles"
+  },
+  "show_notification": true
+}

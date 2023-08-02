@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "new_soviet:light_blue_tiles"
+  },
+  "result": "new_soviet:cracked_light_blue_tiles"
+}

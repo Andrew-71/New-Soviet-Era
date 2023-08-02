@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.MapColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -21,12 +22,12 @@ import java.util.function.Supplier;
 
 public class NSE_Custom {
 
-    public static final TVBlock TV = new TVBlock();
-    public static final TVBlock RED_TV = new TVBlock();
-    public static final TVBlock BROWN_TV = new TVBlock();
+    public static final TVBlock TV = new TVBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_YELLOW));
+    public static final TVBlock RED_TV = new TVBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_RED));
+    public static final TVBlock BROWN_TV = new TVBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_BROWN));
     public static final RadioBlock RADIO = new RadioBlock();
-    public static final LampBlock LAMP = new LampBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.LANTERN));
-    public static final CeilingFanBlock CEILING_FAN = new CeilingFanBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL));
+    public static final LampBlock LAMP = new LampBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.LANTERN).strength(1f, 1.5f).mapColor(MapColor.WHITE));
+    public static final CeilingFanBlock CEILING_FAN = new CeilingFanBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).strength(1f, 1.5f).mapColor(MapColor.WHITE));
 
     public static final AirRaidBlock SIREN = new AirRaidBlock();
 

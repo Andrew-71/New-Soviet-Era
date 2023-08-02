@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "new_soviet:diagonal_calcite_tiles"
+  },
+  "result": "new_soviet:calcite_tiles"
+}

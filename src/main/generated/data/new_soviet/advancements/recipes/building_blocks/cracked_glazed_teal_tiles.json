@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glazed_teal_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "new_soviet:glazed_teal_tiles"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "new_soviet:cracked_glazed_teal_tiles"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_glazed_teal_tiles",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "new_soviet:cracked_glazed_teal_tiles"
+    ]
+  },
+  "sends_telemetry_event": false
+}
