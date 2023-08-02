@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.block.WallBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
@@ -106,23 +107,29 @@ public class NSE_Blocks {
     public static final Block CRACKED_TUFF_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_GRAY));
     public static final Block MOSSY_TUFF_BRICKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.TUFF).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_GRAY));
 
-    // Industrial =====================================
-    public static final Block INDUSTRIAL_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.BLACK));
-    public static final Block RED_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.RED));
-    public static final Block ORANGE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.ORANGE));
-    public static final Block YELLOW_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.YELLOW));
-    public static final Block CYAN_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.CYAN));
-    public static final Block LIGHT_BLUE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.LIGHT_BLUE));
-    public static final Block BLUE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.BLUE));
-    public static final Block LIME_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.LIME));
-    public static final Block GREEN_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.GREEN));
-    public static final Block GRAY_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.GRAY));
-    public static final Block PURPLE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.PURPLE));
-    public static final Block MAGENTA_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.MAGENTA));
 
-    public static final Block METAL_PLATING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(5f).requiresTool().mapColor(MapColor.IRON_GRAY));
-    public static final Block CRATE = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).nonOpaque().mapColor(MapColor.OAK_TAN));
-    public static final WallBlock CONCRETE_WALL = new WallBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).mapColor(MapColor.STONE_GRAY));
+    public static final Block WHITEWASH = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).strength(1.5f, 6f).requiresTool().mapColor(MapColor.OFF_WHITE));
+    public static final Block CRACKED_WHITEWASH = new Block(FabricBlockSettings.copy(WHITEWASH));
+    public static final Block VERY_CRACKED_WHITEWASH = new Block(FabricBlockSettings.copy(WHITEWASH));
+
+    public static final Block WHITE_CONCRETE = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).strength(1.5f, 6f).requiresTool().mapColor(MapColor.OFF_WHITE));
+    public static final Block CRACKED_WHITE_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE));
+    public static final Block WHITE_CONCRETE_WITH_BARS = new Block(FabricBlockSettings.copy(WHITE_CONCRETE));
+    public static final Block BEIGE_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.OAK_TAN));
+    public static final Block CRACKED_BEIGE_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.OAK_TAN));
+    public static final Block BEIGE_CONCRETE_WITH_BARS = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.OAK_TAN));
+    public static final Block BLUE_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_BLUE));
+    public static final Block CRACKED_BLUE_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_BLUE));
+    public static final Block BLUE_CONCRETE_WITH_BARS = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_BLUE));
+    public static final Block RED_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_RED));
+    public static final Block CRACKED_RED_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_RED));
+    public static final Block RED_CONCRETE_WITH_BARS = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_RED));
+    public static final Block YELLOW_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_YELLOW));
+    public static final Block CRACKED_YELLOW_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_YELLOW));
+    public static final Block YELLOW_CONCRETE_WITH_BARS = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_YELLOW));
+    public static final Block GREEN_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_GREEN));
+    public static final Block CRACKED_GREEN_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_GREEN));
+    public static final Block GREEN_CONCRETE_WITH_BARS = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_GREEN));
 
     // WOOD/FLOOR ======
     public static final Block HERRINGBONE_ACACIA_PLANKS = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f).mapColor(MapColor.ORANGE));
@@ -156,7 +163,23 @@ public class NSE_Blocks {
     public static final Block CROSS_ORANGE_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f));
     public static final Block CROSS_BROWN_LINOLEUM = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).hardness(2f).resistance(3f));
 
-    // Concrete
+    // Industrial =====================================
+    public static final Block INDUSTRIAL_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.BLACK));
+    public static final Block RED_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.RED));
+    public static final Block ORANGE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.ORANGE));
+    public static final Block YELLOW_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.YELLOW));
+    public static final Block CYAN_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.CYAN));
+    public static final Block LIGHT_BLUE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.LIGHT_BLUE));
+    public static final Block BLUE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.BLUE));
+    public static final Block LIME_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.LIME));
+    public static final Block GREEN_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.GREEN));
+    public static final Block GRAY_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.GRAY));
+    public static final Block PURPLE_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.PURPLE));
+    public static final Block MAGENTA_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.MAGENTA));
+
+    public static final Block METAL_PLATING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(5f).requiresTool().mapColor(MapColor.IRON_GRAY));
+    public static final Block CRATE = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOD).nonOpaque().mapColor(MapColor.OAK_TAN));
+    public static final WallBlock CONCRETE_WALL = new WallBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).mapColor(MapColor.STONE_GRAY));
 
     private static final ItemGroup NSE_BUILDING_TAB = FabricItemGroup.builder()
             .icon(() -> new ItemStack(CALCITE_TILES))
@@ -249,22 +272,28 @@ public class NSE_Blocks {
         register("cracked_tuff_bricks", () -> CRACKED_TUFF_BRICKS, NSE_BUILDING_TAB);
         register("mossy_tuff_bricks", () -> MOSSY_TUFF_BRICKS, NSE_BUILDING_TAB);
 
-        register("industrial_warning", () -> INDUSTRIAL_WARNING, NSE_BUILDING_TAB);
-        register("gray_warning", () -> GRAY_WARNING, NSE_BUILDING_TAB);
-        register("red_warning", () -> RED_WARNING, NSE_BUILDING_TAB);
-        register("orange_warning", () -> ORANGE_WARNING, NSE_BUILDING_TAB);
-        register("yellow_warning", () -> YELLOW_WARNING, NSE_BUILDING_TAB);
-        register("lime_warning", () -> LIME_WARNING, NSE_BUILDING_TAB);
-        register("green_warning", () -> GREEN_WARNING, NSE_BUILDING_TAB);
-        register("cyan_warning", () -> CYAN_WARNING, NSE_BUILDING_TAB);
-        register("light_blue_warning", () -> LIGHT_BLUE_WARNING, NSE_BUILDING_TAB);
-        register("blue_warning", () -> BLUE_WARNING, NSE_BUILDING_TAB);
-        register("purple_warning", () -> PURPLE_WARNING, NSE_BUILDING_TAB);
-        register("magenta_warning", () -> MAGENTA_WARNING, NSE_BUILDING_TAB);
+        register("whitewash", () -> WHITEWASH, NSE_BUILDING_TAB);
+        register("cracked_whitewash", () -> CRACKED_WHITEWASH, NSE_BUILDING_TAB);
+        register("very_cracked_whitewash", () -> VERY_CRACKED_WHITEWASH, NSE_BUILDING_TAB);
 
-        register("metal_plating", () -> METAL_PLATING, NSE_BUILDING_TAB);
-        register("crate", () -> CRATE, NSE_BUILDING_TAB);
-        register("concrete_wall", () -> CONCRETE_WALL, NSE_BUILDING_TAB);  // TODO: Broken
+        register("white_concrete", () -> WHITE_CONCRETE, NSE_BUILDING_TAB);
+        register("cracked_white_concrete", () -> CRACKED_WHITE_CONCRETE, NSE_BUILDING_TAB);
+        register("white_concrete_with_bars", () -> WHITE_CONCRETE_WITH_BARS, NSE_BUILDING_TAB);
+        register("beige_concrete", () -> BEIGE_CONCRETE, NSE_BUILDING_TAB);
+        register("cracked_beige_concrete", () -> CRACKED_BEIGE_CONCRETE, NSE_BUILDING_TAB);
+        register("beige_concrete_with_bars", () -> BEIGE_CONCRETE_WITH_BARS, NSE_BUILDING_TAB);
+        register("blue_concrete", () -> BLUE_CONCRETE, NSE_BUILDING_TAB);
+        register("cracked_blue_concrete", () -> CRACKED_BLUE_CONCRETE, NSE_BUILDING_TAB);
+        register("blue_concrete_with_bars", () -> BLUE_CONCRETE_WITH_BARS, NSE_BUILDING_TAB);
+        register("red_concrete", () -> RED_CONCRETE, NSE_BUILDING_TAB);
+        register("cracked_red_concrete", () -> CRACKED_RED_CONCRETE, NSE_BUILDING_TAB);
+        register("red_concrete_with_bars", () -> RED_CONCRETE_WITH_BARS, NSE_BUILDING_TAB);
+        register("yellow_concrete", () -> YELLOW_CONCRETE, NSE_BUILDING_TAB);
+        register("cracked_yellow_concrete", () -> CRACKED_YELLOW_CONCRETE, NSE_BUILDING_TAB);
+        register("yellow_concrete_with_bars", () -> YELLOW_CONCRETE_WITH_BARS, NSE_BUILDING_TAB);
+        register("green_concrete", () -> GREEN_CONCRETE, NSE_BUILDING_TAB);
+        register("cracked_green_concrete", () -> CRACKED_GREEN_CONCRETE, NSE_BUILDING_TAB);
+        register("green_concrete_with_bars", () -> GREEN_CONCRETE_WITH_BARS, NSE_BUILDING_TAB);
 
         register("herringbone_acacia_planks", () -> HERRINGBONE_ACACIA_PLANKS, NSE_BUILDING_TAB);
         register("cross_acacia_planks", () -> CROSS_ACACIA_PLANKS, NSE_BUILDING_TAB);
@@ -296,6 +325,23 @@ public class NSE_Blocks {
         register("cyan_linoleum", () -> CYAN_LINOLEUM, NSE_BUILDING_TAB);
         register("cross_orange_linoleum", () -> CROSS_ORANGE_LINOLEUM, NSE_BUILDING_TAB);
         register("cross_brown_linoleum", () -> CROSS_BROWN_LINOLEUM, NSE_BUILDING_TAB);
+
+        register("industrial_warning", () -> INDUSTRIAL_WARNING, NSE_BUILDING_TAB);
+        register("gray_warning", () -> GRAY_WARNING, NSE_BUILDING_TAB);
+        register("red_warning", () -> RED_WARNING, NSE_BUILDING_TAB);
+        register("orange_warning", () -> ORANGE_WARNING, NSE_BUILDING_TAB);
+        register("yellow_warning", () -> YELLOW_WARNING, NSE_BUILDING_TAB);
+        register("lime_warning", () -> LIME_WARNING, NSE_BUILDING_TAB);
+        register("green_warning", () -> GREEN_WARNING, NSE_BUILDING_TAB);
+        register("cyan_warning", () -> CYAN_WARNING, NSE_BUILDING_TAB);
+        register("light_blue_warning", () -> LIGHT_BLUE_WARNING, NSE_BUILDING_TAB);
+        register("blue_warning", () -> BLUE_WARNING, NSE_BUILDING_TAB);
+        register("purple_warning", () -> PURPLE_WARNING, NSE_BUILDING_TAB);
+        register("magenta_warning", () -> MAGENTA_WARNING, NSE_BUILDING_TAB);
+
+        register("metal_plating", () -> METAL_PLATING, NSE_BUILDING_TAB);
+        register("crate", () -> CRATE, NSE_BUILDING_TAB);
+        register("concrete_wall", () -> CONCRETE_WALL, NSE_BUILDING_TAB);  // TODO: Broken
     }
 
     public static void initFlame() {

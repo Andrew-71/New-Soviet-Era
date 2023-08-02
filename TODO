@@ -1,19 +1,14 @@
-1. Add brown+white+yellow+red+green blocks, whitewash, concrete
-2. Figure out what to do with "NII wall", nii floor, tilled block
-6. Work on custom blocks and doors, etc.
-9. Possibly make all NSE_<type> into a generic class with inheritance (for registration functions)
-
-
 === ADD BLOCKS/FEATURES ===
-* Add brown+white+yellow+red+green blocks, whitewash, concrete
+* Add brown+white+yellow+red+green blocks
+* Add slab and stair variations
 * Add doors and fences
 * Add windows
 * Add (with functionality) present appliance/furniture/electronics textures
-* Fully make datagen for tags, recipes (with unlocks), drops, achievements
 * Figure out what to do with "NII wall", nii floor, tilled block
 
 === FIX STUFF ===
 * PO2 wall
+* Replace a ton of stuff with FabricBlockSettings.copy and resistance+hardness -> strength
 
 === NON-GAME CHANGES ===
 * Minotaur publishing to modrinth and something similar for curse

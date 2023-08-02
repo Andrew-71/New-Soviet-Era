@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cracked_whitewash": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "new_soviet:cracked_whitewash"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "new_soviet:very_cracked_whitewash"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_cracked_whitewash",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "new_soviet:very_cracked_whitewash"
+    ]
+  },
+  "sends_telemetry_event": false
+}

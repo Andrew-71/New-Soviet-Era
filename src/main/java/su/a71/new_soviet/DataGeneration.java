@@ -6,9 +6,12 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Blocks;
+import net.minecraft.data.client.BlockStateModelGenerator;
+import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -148,6 +151,21 @@ public class DataGeneration implements DataGeneratorEntrypoint {
             addDrop(NSE_Blocks.CYAN_LINOLEUM);
             addDrop(NSE_Blocks.CROSS_ORANGE_LINOLEUM);
             addDrop(NSE_Blocks.CROSS_BROWN_LINOLEUM);
+            addDrop(NSE_Blocks.WHITE_CONCRETE);
+            addDrop(NSE_Blocks.CRACKED_WHITE_CONCRETE);
+            addDrop(NSE_Blocks.BEIGE_CONCRETE);
+            addDrop(NSE_Blocks.CRACKED_BEIGE_CONCRETE);
+            addDrop(NSE_Blocks.BLUE_CONCRETE);
+            addDrop(NSE_Blocks.CRACKED_BLUE_CONCRETE);
+            addDrop(NSE_Blocks.RED_CONCRETE);
+            addDrop(NSE_Blocks.CRACKED_RED_CONCRETE);
+            addDrop(NSE_Blocks.YELLOW_CONCRETE);
+            addDrop(NSE_Blocks.CRACKED_YELLOW_CONCRETE);
+            addDrop(NSE_Blocks.GREEN_CONCRETE);
+            addDrop(NSE_Blocks.CRACKED_GREEN_CONCRETE);
+            addDrop(NSE_Blocks.WHITEWASH);
+            addDrop(NSE_Blocks.CRACKED_WHITEWASH);
+            addDrop(NSE_Blocks.VERY_CRACKED_WHITEWASH);
 
             // Drops for furniture/electronics/appliances
             addDrop(NSE_Custom.TV);
@@ -465,6 +483,14 @@ public class DataGeneration implements DataGeneratorEntrypoint {
             offerCrackingRecipe(exporter, NSE_Blocks.CRACKED_GREEN_WHITE_TILES, NSE_Blocks.GREEN_WHITE_TILES);
             offerCrackingRecipe(exporter, NSE_Blocks.CRACKED_TUFF_TILES, NSE_Blocks.TUFF_TILES);
             offerCrackingRecipe(exporter, NSE_Blocks.CRACKED_TUFF_BRICKS, NSE_Blocks.TUFF_BRICKS);
+            offerCrackingRecipe(exporter, NSE_Blocks.CRACKED_WHITEWASH, NSE_Blocks.WHITEWASH);
+            offerCrackingRecipe(exporter, NSE_Blocks.VERY_CRACKED_WHITEWASH, NSE_Blocks.CRACKED_WHITEWASH);
+            offerCrackingRecipe(exporter, NSE_Blocks.CRACKED_WHITE_CONCRETE, NSE_Blocks.WHITE_CONCRETE);
+            offerCrackingRecipe(exporter, NSE_Blocks.CRACKED_BEIGE_CONCRETE, NSE_Blocks.BEIGE_CONCRETE);
+            offerCrackingRecipe(exporter, NSE_Blocks.CRACKED_BLUE_CONCRETE, NSE_Blocks.BLUE_CONCRETE);
+            offerCrackingRecipe(exporter, NSE_Blocks.CRACKED_RED_CONCRETE, NSE_Blocks.RED_CONCRETE);
+            offerCrackingRecipe(exporter, NSE_Blocks.CRACKED_YELLOW_CONCRETE, NSE_Blocks.YELLOW_CONCRETE);
+            offerCrackingRecipe(exporter, NSE_Blocks.CRACKED_GREEN_CONCRETE, NSE_Blocks.GREEN_CONCRETE);
 
             mossRecipe(exporter, NSE_Blocks.MOSSY_SAND_TILES, NSE_Blocks.SAND_TILES);
             mossRecipe(exporter, NSE_Blocks.MOSSY_SAND_BRICKS, NSE_Blocks.SAND_BRICKS);
@@ -565,11 +591,27 @@ public class DataGeneration implements DataGeneratorEntrypoint {
         }
     }
 
+    // This is often used once to generate some model and then move it into "proper" assets folder
+    private static class ModelGenerator extends FabricModelProvider {
+        private ModelGenerator(FabricDataOutput generator) {
+            super(generator);
+        }
+
+        @Override
+        public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        }
+
+        @Override
+        public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        }
+    }
+
     @Override
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
-        FabricDataGenerator.Pack myPack = fabricDataGenerator.createPack();
-        myPack.addProvider(BlockLootTables::new);
-        myPack.addProvider(RecipeGenerator::new);
-        myPack.addProvider(BlockTagGenerator::new);
+        FabricDataGenerator.Pack NSEPack = fabricDataGenerator.createPack();
+        NSEPack.addProvider(BlockLootTables::new);
+        NSEPack.addProvider(RecipeGenerator::new);
+        NSEPack.addProvider(BlockTagGenerator::new);
+        NSEPack.addProvider(ModelGenerator::new);
     }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "new_soviet:block/concrete/white_concrete"
+  }
+}
