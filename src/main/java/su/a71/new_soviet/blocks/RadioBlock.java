@@ -27,14 +27,11 @@ public class RadioBlock extends HorizontalFacingBlock {
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
         Direction dir = state.get(FACING);
-        switch(dir) {
-            case NORTH, SOUTH:
-                return VoxelShapes.cuboid(0.0625f, 0.0f, 0.3125f, 0.9375f, 0.5625f, 0.6875f);
-            case EAST, WEST:
-                return VoxelShapes.cuboid(0.3125f, 0.0f, 0.0625f, 0.6875f, 0.5625f, 0.9375f);
-            default:
-                return VoxelShapes.fullCube();
-        }
+        return switch (dir) {
+            case NORTH, SOUTH -> VoxelShapes.cuboid(0.0625f, 0.0f, 0.3125f, 0.9375f, 0.5625f, 0.6875f);
+            case EAST, WEST -> VoxelShapes.cuboid(0.3125f, 0.0f, 0.0625f, 0.6875f, 0.5625f, 0.9375f);
+            default -> VoxelShapes.fullCube();
+        };
     }
 
     @Override

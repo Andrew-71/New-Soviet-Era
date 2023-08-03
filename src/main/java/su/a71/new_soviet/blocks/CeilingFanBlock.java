@@ -52,7 +52,6 @@ public class CeilingFanBlock extends Block {
         if ((Boolean)state.get(ON) && !world.isReceivingRedstonePower(pos)) {
             world.setBlockState(pos, (BlockState)state.cycle(ON), 2);
         }
-
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
