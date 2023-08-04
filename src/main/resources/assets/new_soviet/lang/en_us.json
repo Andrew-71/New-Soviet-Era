@@ -130,6 +130,7 @@
   "block.new_soviet.siren": "Siren",
   "item.new_soviet.dice": "Dice",
   "item.new_soviet.dice.thrown": "Dice was thrown with result:",
+  "item.new_soviet.dice.thrown_multiple": "Dice were thrown with result:",
   "subtitles.new_soviet.dice_throw": "Dice thrown",
   "block.new_soviet.landmine": "AP Landmine"
 }

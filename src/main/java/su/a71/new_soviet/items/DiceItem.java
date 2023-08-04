@@ -26,7 +26,7 @@ public class DiceItem extends Item {
                 world.playSound((PlayerEntity)null, user.getX(), user.getY(), user.getZ(), NSE_Items.DICE_SOUND, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
                 output.append(NewSoviet.RANDOM.nextBetween(1, 6) + ", ");
             }
-            user.sendMessage(Text.translatable("item.new_soviet.dice.thrown").append(" " + output.subSequence(0, output.length() - 2)));
+            user.sendMessage(Text.translatable(itemStack.getCount() == 1 ? "item.new_soviet.dice.thrown" : "item.new_soviet.dice.thrown_multiple").append(" " + output.subSequence(0, output.length() - 2)));
         }
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));
