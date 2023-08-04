@@ -23,6 +23,7 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.Util;
 import su.a71.new_soviet.registration.NSE_Blocks;
+import su.a71.new_soviet.registration.NSE_Combat;
 import su.a71.new_soviet.registration.NSE_Custom;
 import su.a71.new_soviet.registration.NSE_Items;
 
@@ -336,6 +337,25 @@ public class DataGeneration implements DataGeneratorEntrypoint {
             }
         }
 
+        private void diceRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible dice) {
+            var buttons = Util.make(Lists.newArrayList(), list -> {
+                list.add(Blocks.OAK_BUTTON);
+                list.add(Blocks.BAMBOO_BUTTON);
+                list.add(Blocks.BIRCH_BUTTON);
+                list.add(Blocks.CHERRY_BUTTON);
+                list.add(Blocks.ACACIA_BUTTON);
+                list.add(Blocks.CRIMSON_BUTTON);
+                list.add(Blocks.DARK_OAK_BUTTON);
+                list.add(Blocks.JUNGLE_BUTTON);
+                list.add(Blocks.MANGROVE_BUTTON);
+                list.add(Blocks.SPRUCE_BUTTON);
+                list.add(Blocks.WARPED_BUTTON);
+            });
+            for (Object button : buttons) {
+                offerStonecuttingRecipe(exporter, RecipeCategory.MISC, dice, (ItemConvertible) button);
+            }
+        }
+
         private void warningStripeRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible dye) {
             ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 4)
             .pattern("D#D")
@@ -591,6 +611,10 @@ public class DataGeneration implements DataGeneratorEntrypoint {
                 list.add(NSE_Blocks.BIG_TUFF_TILES);
                 list.add(Blocks.TUFF);
             }), RecipeCategory.BUILDING_BLOCKS);
+
+            diceRecipe(exporter, NSE_Items.DICE_D4);
+            diceRecipe(exporter, NSE_Items.DICE_D6);
+            diceRecipe(exporter, NSE_Items.DICE_D20);
         }
     }
 

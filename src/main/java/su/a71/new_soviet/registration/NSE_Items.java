@@ -20,6 +20,8 @@ import java.util.Optional;
 import java.util.function.Supplier;
 import net.minecraft.util.Rarity;
 import su.a71.new_soviet.NewSoviet;
+import su.a71.new_soviet.items.DiceD20Item;
+import su.a71.new_soviet.items.DiceD4Item;
 import su.a71.new_soviet.items.DiceItem;
 
 public class NSE_Items {
@@ -30,7 +32,10 @@ public class NSE_Items {
     public static final FoodComponent COCONUT_FC = (new FoodComponent.Builder()).hunger(4).saturationModifier(1.2F).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 1), 1.0F).statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 2400, 0), 1.0F).alwaysEdible().build();
     public static final Item COCONUT = new Item(new Item.Settings().food(COCONUT_FC).rarity(Rarity.EPIC));
 
-    public static final DiceItem DICE = new DiceItem(new Item.Settings().maxCount(6));
+    public static final DiceItem DICE_D6 = new DiceItem(new Item.Settings().maxCount(6));
+    public static final DiceD4Item DICE_D4 = new DiceD4Item(new Item.Settings().maxCount(6));
+    public static final DiceD20Item DICE_D20 = new DiceD20Item(new Item.Settings().maxCount(6));
+
     public static final SoundEvent DICE_SOUND = SoundEvent.of(new Identifier("new_soviet", "dice_sound"));
 
     private static final ItemGroup NSE_ITEMS_TAB = FabricItemGroup.builder()
@@ -52,7 +57,9 @@ public class NSE_Items {
         Registry.register(Registries.ITEM_GROUP, new Identifier("new_soviet", "items"), NSE_ITEMS_TAB);
         register("sickle", () -> SICKLE, NSE_ITEMS_TAB);
         register("coconut", () -> COCONUT, NSE_ITEMS_TAB);
-        register("dice", () -> DICE, NSE_ITEMS_TAB);
+        register("dice_d6", () -> DICE_D6, NSE_ITEMS_TAB);
+        register("dice_d4", () -> DICE_D4, NSE_ITEMS_TAB);
+        register("dice_d20", () -> DICE_D20, NSE_ITEMS_TAB);
 
         Registry.register(Registries.SOUND_EVENT, new Identifier("new_soviet", "dice_sound"), DICE_SOUND);
     }

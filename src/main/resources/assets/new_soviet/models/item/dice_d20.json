@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "new_soviet:item/dice/dice_d20"
+  }
+}
+

@@ -16,6 +16,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
@@ -112,7 +113,8 @@ public class LandMineBlock extends Block implements Waterloggable {
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return SHAPE;
+        Vec3d vec3d = state.getModelOffset(world, pos);
+        return SHAPE.offset(vec3d.getX(), vec3d.getY(), vec3d.getZ());
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {

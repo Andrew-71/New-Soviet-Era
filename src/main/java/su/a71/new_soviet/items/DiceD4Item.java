@@ -16,8 +16,8 @@ import su.a71.new_soviet.registration.NSE_Items;
 
 import java.util.List;
 
-public class DiceItem extends Item {
-    public DiceItem(Settings settings) {
+public class DiceD4Item extends Item {
+    public DiceD4Item(Settings settings) {
         super(settings);
     }
 
@@ -38,12 +38,12 @@ public class DiceItem extends Item {
     }
 
     public int getSides() {
-        return 6;
+        return 4;
     }
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("item.new_soviet.dice_d6.tooltip"));
+        tooltip.add(Text.translatable("item.new_soviet.dice_d4.tooltip"));
         super.appendTooltip(stack, world, tooltip, context);
     }
 }
