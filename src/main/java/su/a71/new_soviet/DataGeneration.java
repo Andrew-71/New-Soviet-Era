@@ -22,6 +22,9 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.Util;
+import su.a71.new_soviet.registration.NSE_Blocks;
+import su.a71.new_soviet.registration.NSE_Custom;
+import su.a71.new_soviet.registration.NSE_Items;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;

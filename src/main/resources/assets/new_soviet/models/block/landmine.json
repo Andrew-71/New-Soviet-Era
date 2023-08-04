@@ -1,0 +1,57 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "new_soviet:block/combat/ap_mine",
+		"particle": "new_soviet:block/combat/ap_mine"
+	},
+	"elements": [
+		{
+			"from": [5, 1, 5],
+			"to": [11, 2, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [3, 3, 6, 3.5], "texture": "#0"},
+				"east": {"uv": [0, 3, 3, 3.5], "texture": "#0"},
+				"south": {"uv": [9, 3, 12, 3.5], "texture": "#0"},
+				"west": {"uv": [6, 3, 9, 3.5], "texture": "#0"},
+				"up": {"uv": [6, 3, 3, 0], "texture": "#0"},
+				"down": {"uv": [9, 0, 6, 3], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5.5, 0, 5.5],
+			"to": [10.5, 1, 10.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.5, 0, 8.5]},
+			"faces": {
+				"north": {"uv": [2.5, 6, 5, 6.5], "texture": "#0"},
+				"east": {"uv": [0, 6, 2.5, 6.5], "texture": "#0"},
+				"south": {"uv": [7.5, 6, 10, 6.5], "texture": "#0"},
+				"west": {"uv": [5, 6, 7.5, 6.5], "texture": "#0"},
+				"up": {"uv": [5, 6, 2.5, 3.5], "texture": "#0"},
+				"down": {"uv": [7.5, 3.5, 5, 6], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7.5, 0, 4.5],
+			"to": [8.5, 1, 5.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.5, 0, 8.5]},
+			"faces": {
+				"north": {"uv": [0.5, 0.5, 1, 1], "texture": "#0"},
+				"east": {"uv": [0, 0.5, 0.5, 1], "texture": "#0"},
+				"south": {"uv": [1.5, 0.5, 2, 1], "texture": "#0"},
+				"west": {"uv": [1, 0.5, 1.5, 1], "texture": "#0"},
+				"up": {"uv": [1, 0.5, 0.5, 0], "texture": "#0"},
+				"down": {"uv": [1.5, 0, 1, 0.5], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "group",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2]
+		}
+	]
+}

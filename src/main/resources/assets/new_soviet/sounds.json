@@ -1,0 +1,9 @@
+{
+  "dice_sound": {
+    "subtitle": "subtitles.new_soviet.dice_throw",
+    "sounds": [
+      "new_soviet:dice_roll"
+    ]
+  }
+}
+

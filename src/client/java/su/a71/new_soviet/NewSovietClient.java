@@ -5,6 +5,8 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
+import su.a71.new_soviet.registration.NSE_Blocks;
+import su.a71.new_soviet.registration.NSE_Custom;
 
 @Environment(EnvType.CLIENT)
 public class NewSovietClient implements ClientModInitializer {

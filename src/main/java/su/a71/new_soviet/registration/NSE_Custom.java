@@ -1,4 +1,4 @@
-package su.a71.new_soviet;
+package su.a71.new_soviet.registration;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -15,6 +15,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import su.a71.new_soviet.NewSoviet;
 import su.a71.new_soviet.blocks.*;
 
 import java.util.Optional;
