@@ -656,6 +656,10 @@ public class DataGeneration implements DataGeneratorEntrypoint {
             diceRecipe(exporter, NSE_Items.DICE_D4);
             diceRecipe(exporter, NSE_Items.DICE_D6);
             diceRecipe(exporter, NSE_Items.DICE_D20);
+
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, NSE_Blocks.CHISELED_MANGROVE_DOOR, Blocks.MANGROVE_DOOR);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, NSE_Blocks.CHISELED_OAK_DOOR, Blocks.OAK_DOOR);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, NSE_Blocks.CHISELED_SPRUCE_DOOR, Blocks.SPRUCE_DOOR);
         }
     }
 

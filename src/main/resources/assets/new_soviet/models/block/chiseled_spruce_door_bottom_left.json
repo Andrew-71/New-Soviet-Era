@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "new_soviet:block/doors/chiseled_spruce_door_lower",
+    "top": "new_soviet:block/doors/chiseled_spruce_door_upper"
+  }
+}

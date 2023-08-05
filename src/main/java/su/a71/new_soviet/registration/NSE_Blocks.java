@@ -5,10 +5,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.MapColor;
-import net.minecraft.block.WallBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -108,7 +105,6 @@ public class NSE_Blocks {
     public static final Block CRACKED_TUFF_BRICKS = new Block(FabricBlockSettings.copy(Blocks.TUFF));
     public static final Block MOSSY_TUFF_BRICKS = new Block(FabricBlockSettings.copy(Blocks.TUFF));
 
-
     public static final Block WHITEWASH = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).strength(1.5f, 6f).requiresTool().mapColor(MapColor.OFF_WHITE));
     public static final Block CRACKED_WHITEWASH = new Block(FabricBlockSettings.copy(WHITEWASH));
     public static final Block VERY_CRACKED_WHITEWASH = new Block(FabricBlockSettings.copy(WHITEWASH));
@@ -163,6 +159,10 @@ public class NSE_Blocks {
     public static final Block CYAN_LINOLEUM = new Block(FabricBlockSettings.copy(GREEN_LINOLEUM).mapColor(MapColor.CYAN));
     public static final Block CROSS_ORANGE_LINOLEUM = new Block(FabricBlockSettings.copy(GREEN_LINOLEUM).mapColor(MapColor.ORANGE));
     public static final Block CROSS_BROWN_LINOLEUM = new Block(FabricBlockSettings.copy(GREEN_LINOLEUM).mapColor(MapColor.BROWN));
+
+    public static final DoorBlock CHISELED_MANGROVE_DOOR = new DoorBlock(FabricBlockSettings.copy(Blocks.MANGROVE_DOOR), BlockSetType.MANGROVE);
+    public static final DoorBlock CHISELED_OAK_DOOR = new DoorBlock(FabricBlockSettings.copy(Blocks.OAK_DOOR), BlockSetType.OAK);
+    public static final DoorBlock CHISELED_SPRUCE_DOOR = new DoorBlock(FabricBlockSettings.copy(Blocks.SPRUCE_DOOR), BlockSetType.SPRUCE);
 
     // Industrial =====================================
     public static final Block INDUSTRIAL_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.BLACK));
@@ -326,6 +326,10 @@ public class NSE_Blocks {
         register("cyan_linoleum", () -> CYAN_LINOLEUM, NSE_BUILDING_TAB);
         register("cross_orange_linoleum", () -> CROSS_ORANGE_LINOLEUM, NSE_BUILDING_TAB);
         register("cross_brown_linoleum", () -> CROSS_BROWN_LINOLEUM, NSE_BUILDING_TAB);
+
+        register("chiseled_mangrove_door", () -> CHISELED_MANGROVE_DOOR, NSE_BUILDING_TAB);
+        register("chiseled_oak_door", () -> CHISELED_OAK_DOOR, NSE_BUILDING_TAB);
+        register("chiseled_spruce_door", () -> CHISELED_SPRUCE_DOOR, NSE_BUILDING_TAB);
 
         register("industrial_warning", () -> INDUSTRIAL_WARNING, NSE_BUILDING_TAB);
         register("gray_warning", () -> GRAY_WARNING, NSE_BUILDING_TAB);
