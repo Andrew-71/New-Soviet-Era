@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "new_soviet:herringbone_dark_oak_planks"
+  },
+  "result": "new_soviet:cross_dark_oak_planks"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "new_soviet:cross_birch_planks"
+  },
+  "result": "new_soviet:herringbone_birch_planks"
+}

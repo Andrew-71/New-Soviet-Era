@@ -121,6 +121,7 @@ public class LandMineBlock extends Block implements Waterloggable {
     }
 
     public void explode(World world, BlockPos pos) {
+        if (world.isClient()) return;
         world.removeBlock(pos, false);
         float f = 4.0F;
         world.createExplosion(null, pos.getX(), pos.getY(), pos.getZ(), 4.0F, World.ExplosionSourceType.TNT);
