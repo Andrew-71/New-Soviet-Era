@@ -4,6 +4,12 @@
     "sounds": [
       "new_soviet:dice_roll"
     ]
+  },
+  "siren_sound": {
+    "subtitle": "subtitles.new_soviet.siren",
+    "sounds": [
+      "new_soviet:siren"
+    ]
   }
 }
 

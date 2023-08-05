@@ -13,6 +13,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import su.a71.new_soviet.NewSoviet;
@@ -30,8 +31,8 @@ public class NSE_Custom {
     public static final LampBlock LAMP = new LampBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.LANTERN).strength(1f, 1.5f).mapColor(MapColor.WHITE));
     public static final CeilingFanBlock CEILING_FAN = new CeilingFanBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).strength(1f, 1.5f).mapColor(MapColor.WHITE));
 
-    public static final AirRaidBlock SIREN = new AirRaidBlock();
-
+    public static final SirenBlock SIREN = new SirenBlock();
+    public static final SoundEvent SIREN_SOUND = SoundEvent.of(new Identifier("new_soviet", "siren_sound"));
 
     private static final ItemGroup NSE_CUSTOM_TAB = FabricItemGroup.builder()
             .icon(() -> new ItemStack(TV))
@@ -60,5 +61,6 @@ public class NSE_Custom {
         register("ceiling_fan", () -> CEILING_FAN, NSE_CUSTOM_TAB);
         register("siren", () -> SIREN, NSE_CUSTOM_TAB);
 
+        Registry.register(Registries.SOUND_EVENT, new Identifier("new_soviet", "siren_sound"), SIREN_SOUND);
     }
 }
