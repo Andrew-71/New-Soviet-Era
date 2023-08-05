@@ -141,7 +141,7 @@ public class NSE_Blocks {
     public static final Block CROSS_BIRCH_PLANKS = new Block(FabricBlockSettings.copy(Blocks.BIRCH_PLANKS));
     public static final Block HERRINGBONE_CRIMSON_PLANKS = new Block(FabricBlockSettings.copy(Blocks.CRIMSON_PLANKS));
     public static final Block CROSS_CRIMSON_PLANKS = new Block(FabricBlockSettings.copy(Blocks.CRIMSON_PLANKS));
-    public static final Block HERRINGBONE_DARK_OAK_PLAKS = new Block(FabricBlockSettings.copy(Blocks.DARK_OAK_PLANKS));
+    public static final Block HERRINGBONE_DARK_OAK_PLANKS = new Block(FabricBlockSettings.copy(Blocks.DARK_OAK_PLANKS));
     public static final Block CROSS_DARK_OAK_PLANKS = new Block(FabricBlockSettings.copy(Blocks.DARK_OAK_PLANKS));
     public static final Block HERRINGBONE_JUNGLE_PLANKS = new Block(FabricBlockSettings.copy(Blocks.JUNGLE_PLANKS));
     public static final Block CROSS_JUNGLE_PLANKS = new Block(FabricBlockSettings.copy(Blocks.JUNGLE_PLANKS));
@@ -304,7 +304,7 @@ public class NSE_Blocks {
         register("cross_birch_planks", () -> CROSS_BIRCH_PLANKS, NSE_BUILDING_TAB);
         register("herringbone_crimson_planks", () -> HERRINGBONE_CRIMSON_PLANKS, NSE_BUILDING_TAB);
         register("cross_crimson_planks", () -> CROSS_CRIMSON_PLANKS, NSE_BUILDING_TAB);
-        register("herringbone_dark_oak_planks", () -> HERRINGBONE_DARK_OAK_PLAKS, NSE_BUILDING_TAB);
+        register("herringbone_dark_oak_planks", () -> HERRINGBONE_DARK_OAK_PLANKS, NSE_BUILDING_TAB);
         register("cross_dark_oak_planks", () -> CROSS_DARK_OAK_PLANKS, NSE_BUILDING_TAB);
         register("herringbone_jungle_planks", () -> HERRINGBONE_JUNGLE_PLANKS, NSE_BUILDING_TAB);
         register("cross_jungle_planks", () -> CROSS_JUNGLE_PLANKS, NSE_BUILDING_TAB);
@@ -355,7 +355,7 @@ public class NSE_Blocks {
         flammableBlockRegistry.add(HERRINGBONE_BIRCH_PLANKS, 20, 5);
         flammableBlockRegistry.add(CROSS_BIRCH_PLANKS, 20, 5);
         // Crimson doesn't burn!
-        flammableBlockRegistry.add(HERRINGBONE_DARK_OAK_PLAKS, 20, 5);
+        flammableBlockRegistry.add(HERRINGBONE_DARK_OAK_PLANKS, 20, 5);
         flammableBlockRegistry.add(CROSS_DARK_OAK_PLANKS, 20, 5);
         flammableBlockRegistry.add(HERRINGBONE_JUNGLE_PLANKS, 20, 5);
         flammableBlockRegistry.add(CROSS_JUNGLE_PLANKS, 20, 5);

@@ -5,3 +5,9 @@ TV: CC compatible peripheral which combines a speaker and an 8x8 monitor
 Crate: Inventory, like a barrel but smaller
 Air Raid Siren: when powered (?), plays chosen frequency in chosen way at chosen sound. CC Peripheral attached
 Lamp: Both bedside and ceiling are one block, Lamp, that functions sort of like a lantern
+
+Landmine:
+попали -> кабум
+тронули не лопатой -> кабум 80%
+тронули лопатой(сломали) -> 25% кабум
+обезвредили лопатой (ПКМ задержать) -> не кабум

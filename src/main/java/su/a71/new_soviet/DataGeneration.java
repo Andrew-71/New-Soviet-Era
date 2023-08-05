@@ -135,7 +135,7 @@ public class DataGeneration implements DataGeneratorEntrypoint {
             addDrop(NSE_Blocks.CROSS_BIRCH_PLANKS);
             addDrop(NSE_Blocks.HERRINGBONE_CRIMSON_PLANKS);
             addDrop(NSE_Blocks.CROSS_CRIMSON_PLANKS);
-            addDrop(NSE_Blocks.HERRINGBONE_DARK_OAK_PLAKS);
+            addDrop(NSE_Blocks.HERRINGBONE_DARK_OAK_PLANKS);
             addDrop(NSE_Blocks.CROSS_DARK_OAK_PLANKS);
             addDrop(NSE_Blocks.HERRINGBONE_JUNGLE_PLANKS);
             addDrop(NSE_Blocks.CROSS_JUNGLE_PLANKS);
@@ -290,7 +290,7 @@ public class DataGeneration implements DataGeneratorEntrypoint {
                     .add(NSE_Blocks.CROSS_BIRCH_PLANKS)
                     .add(NSE_Blocks.HERRINGBONE_CRIMSON_PLANKS)
                     .add(NSE_Blocks.CROSS_CRIMSON_PLANKS)
-                    .add(NSE_Blocks.HERRINGBONE_DARK_OAK_PLAKS)
+                    .add(NSE_Blocks.HERRINGBONE_DARK_OAK_PLANKS)
                     .add(NSE_Blocks.CROSS_DARK_OAK_PLANKS)
                     .add(NSE_Blocks.HERRINGBONE_JUNGLE_PLANKS)
                     .add(NSE_Blocks.CROSS_JUNGLE_PLANKS)
@@ -610,6 +610,47 @@ public class DataGeneration implements DataGeneratorEntrypoint {
                 list.add(NSE_Blocks.TUFF_BRICKS);
                 list.add(NSE_Blocks.BIG_TUFF_TILES);
                 list.add(Blocks.TUFF);
+            }), RecipeCategory.BUILDING_BLOCKS);
+
+            stoneCuttingCategory(exporter, Util.make(Lists.newArrayList(), list -> {
+                list.add(NSE_Blocks.CROSS_ACACIA_PLANKS);
+                list.add(NSE_Blocks.HERRINGBONE_ACACIA_PLANKS);
+                list.add(Blocks.ACACIA_PLANKS);
+            }), RecipeCategory.BUILDING_BLOCKS);
+            stoneCuttingCategory(exporter, Util.make(Lists.newArrayList(), list -> {
+                list.add(NSE_Blocks.CROSS_OAK_PLANKS);
+                list.add(NSE_Blocks.HERRINGBONE_OAK_PLANKS);
+                list.add(Blocks.OAK_PLANKS);
+            }), RecipeCategory.BUILDING_BLOCKS);
+            stoneCuttingCategory(exporter, Util.make(Lists.newArrayList(), list -> {
+                list.add(NSE_Blocks.CROSS_BIRCH_PLANKS);
+                list.add(NSE_Blocks.HERRINGBONE_BIRCH_PLANKS);
+                list.add(Blocks.BIRCH_PLANKS);
+            }), RecipeCategory.BUILDING_BLOCKS);
+            stoneCuttingCategory(exporter, Util.make(Lists.newArrayList(), list -> {
+                list.add(NSE_Blocks.CROSS_CRIMSON_PLANKS);
+                list.add(NSE_Blocks.HERRINGBONE_CRIMSON_PLANKS);
+                list.add(Blocks.CRIMSON_PLANKS);
+            }), RecipeCategory.BUILDING_BLOCKS);
+            stoneCuttingCategory(exporter, Util.make(Lists.newArrayList(), list -> {
+                list.add(NSE_Blocks.CROSS_DARK_OAK_PLANKS);
+                list.add(NSE_Blocks.HERRINGBONE_DARK_OAK_PLANKS);
+                list.add(Blocks.DARK_OAK_PLANKS);
+            }), RecipeCategory.BUILDING_BLOCKS);
+            stoneCuttingCategory(exporter, Util.make(Lists.newArrayList(), list -> {
+                list.add(NSE_Blocks.CROSS_JUNGLE_PLANKS);
+                list.add(NSE_Blocks.HERRINGBONE_JUNGLE_PLANKS);
+                list.add(Blocks.JUNGLE_PLANKS);
+            }), RecipeCategory.BUILDING_BLOCKS);
+            stoneCuttingCategory(exporter, Util.make(Lists.newArrayList(), list -> {
+                list.add(NSE_Blocks.CROSS_MANGROVE_PLANKS);
+                list.add(NSE_Blocks.HERRINGBONE_MANGROVE_PLANKS);
+                list.add(Blocks.MANGROVE_PLANKS);
+            }), RecipeCategory.BUILDING_BLOCKS);
+            stoneCuttingCategory(exporter, Util.make(Lists.newArrayList(), list -> {
+                list.add(NSE_Blocks.CROSS_SPRUCE_PLANKS);
+                list.add(NSE_Blocks.HERRINGBONE_SPRUCE_PLANKS);
+                list.add(Blocks.SPRUCE_PLANKS);
             }), RecipeCategory.BUILDING_BLOCKS);
 
             diceRecipe(exporter, NSE_Items.DICE_D4);

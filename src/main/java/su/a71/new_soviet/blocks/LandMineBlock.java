@@ -22,10 +22,17 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.explosion.Explosion;
 import org.jetbrains.annotations.Nullable;
 import su.a71.new_soviet.NewSoviet;
+
+import net.minecraft.block.BrushableBlock;
+import net.minecraft.block.TorchBlock;
+import net.minecraft.item.BrushItem;
+
+
 
 public class LandMineBlock extends Block implements Waterloggable {
     public static final BooleanProperty WATERLOGGED;
@@ -36,13 +43,20 @@ public class LandMineBlock extends Block implements Waterloggable {
         this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false));
     }
 
-    @Override
-    public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
-        if (!world.isClient) {
-            if (sourcePos == pos.down() && !canPlaceAt(state, world, pos)) {
-                explode(world, pos);
-            }
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+        if (direction == Direction.DOWN && !this.canPlaceAt(state, world, pos)) {
+            explode((World) world, pos);
+            return Blocks.AIR.getDefaultState();
         }
+        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+    }
+
+    @Override
+    public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
+        if (!world.isClient && entity.canModifyAt(world, pos)) {
+            explode(world, pos);
+        }
+        super.onLandedUpon(world, state, pos, entity, fallDistance);
     }
 
     @Override
@@ -64,12 +78,15 @@ public class LandMineBlock extends Block implements Waterloggable {
 
     }
 
-//    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-//        if (!world.isClient() && !player.isCreative() && player.getHandItems() instanceof ShovelItem) {
-//            explode(world, pos);
-//        }
-//        super.onBreak(world, pos, state, player);
-//    }
+    // With a shovel, 25% chance of explosion on break
+    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        if (!world.isClient() && !player.isCreative() && !(player.getHandItems().iterator().next().getItem() instanceof ShovelItem)) {
+            if (NewSoviet.RANDOM.nextBetween(1, 4) != 1) {
+                explode(world, pos);
+            }
+        }
+        super.onBreak(world, pos, state, player);
+    }
 
     // Only explode every 2/3rd of times to prevent instant explosion chains
     @Override
@@ -83,16 +100,19 @@ public class LandMineBlock extends Block implements Waterloggable {
         super.onDestroyedByExplosion(world, pos, explosion);
     }
 
+    // Without a shovel, 80% chance of explosion on contact
     @Override
     public void onBlockBreakStart(BlockState state, World world, BlockPos pos, PlayerEntity player) {
-        if (!world.isClient() && !(player.getHandItems().iterator().next().getItem() instanceof ShovelItem)) {
-            explode(world, pos);
-        } else {
-            NewSoviet.LOG.info(player.getHandItems().toString());
+        if (!world.isClient() && !(player.getHandItems().iterator().next().getItem() instanceof ShovelItem))
+        {
+            if (NewSoviet.RANDOM.nextBetween(1, 10) < 2) {
+                explode(world, pos);
+            }
         }
         super.onBlockBreakStart(state, world, pos, player);
     }
 
+    // On contact explode
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
             explode(world, pos);
@@ -139,8 +159,9 @@ public class LandMineBlock extends Block implements Waterloggable {
     }
 
     static {
+        SHAPE = Block.createCuboidShape(4, 0, 4, 12, 4, 12); // VoxelShapes.cuboid(0.4, 0, 0.4, 0.6, 0.3, 0.6);  //
 
-        SHAPE = Block.createCuboidShape(5, 0, 5, 11, 3, 11); // VoxelShapes.cuboid(0.4, 0, 0.4, 0.6, 0.3, 0.6);  //
+//        SHAPE = Block.createCuboidShape(5, 0, 5, 11, 3, 11); // VoxelShapes.cuboid(0.4, 0, 0.4, 0.6, 0.3, 0.6);  //
         WATERLOGGED = Properties.WATERLOGGED;
     }
 }
