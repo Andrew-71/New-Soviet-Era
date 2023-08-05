@@ -141,5 +141,11 @@
   "block.new_soviet.chiseled_mangrove_door": "Chiseled Mangrove Door",
   "block.new_soviet.chiseled_oak_door": "Chiseled Oak Door",
   "block.new_soviet.chiseled_spruce_door": "Chiseled Spruce Door",
-  "subtitles.new_soviet.siren": "Siren goes off"
+  "subtitles.new_soviet.siren": "Siren goes off",
+  "block.new_soviet.yellow_concrete_with_bars": "Yellow Concrete With Bars",
+  "block.new_soviet.beige_concrete_with_bars": "Beige Concrete With Bars",
+  "block.new_soviet.white_concrete_with_bars": "White Concrete With Bars",
+  "block.new_soviet.green_concrete_with_bars": "Green Concrete With Bars",
+  "block.new_soviet.blue_concrete_with_bars": "Blue Concrete With Bars",
+  "block.new_soviet.red_concrete_with_bars": "Red Concrete With Bars"
 }

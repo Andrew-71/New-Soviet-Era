@@ -1,0 +1,7 @@
+{
+	"parent": "new_soviet:block/beige_concrete_with_bars",
+	"textures": {
+		"3": "new_soviet:block/concrete/cracked_blue_concrete",
+		"particle": "new_soviet:block/concrete/cracked_blue_concrete"
+	}
+}

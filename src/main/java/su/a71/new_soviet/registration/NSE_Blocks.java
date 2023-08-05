@@ -16,6 +16,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import su.a71.new_soviet.NewSoviet;
+import su.a71.new_soviet.blocks.ConcreteWithBarsBlock;
 
 import java.util.Optional;
 import java.util.function.Supplier;
@@ -111,22 +112,22 @@ public class NSE_Blocks {
 
     public static final Block WHITE_CONCRETE = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).strength(1.5f, 6f).requiresTool().mapColor(MapColor.OFF_WHITE));
     public static final Block CRACKED_WHITE_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE));
-    public static final Block WHITE_CONCRETE_WITH_BARS = new Block(FabricBlockSettings.copy(WHITE_CONCRETE));
+    public static final ConcreteWithBarsBlock WHITE_CONCRETE_WITH_BARS = new ConcreteWithBarsBlock(FabricBlockSettings.copy(WHITE_CONCRETE));
     public static final Block BEIGE_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.OAK_TAN));
     public static final Block CRACKED_BEIGE_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.OAK_TAN));
-    public static final Block BEIGE_CONCRETE_WITH_BARS = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.OAK_TAN));
+    public static final ConcreteWithBarsBlock BEIGE_CONCRETE_WITH_BARS = new ConcreteWithBarsBlock(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.OAK_TAN));
     public static final Block BLUE_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_BLUE));
     public static final Block CRACKED_BLUE_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_BLUE));
-    public static final Block BLUE_CONCRETE_WITH_BARS = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_BLUE));
+    public static final ConcreteWithBarsBlock BLUE_CONCRETE_WITH_BARS = new ConcreteWithBarsBlock(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_BLUE));
     public static final Block RED_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_RED));
     public static final Block CRACKED_RED_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_RED));
-    public static final Block RED_CONCRETE_WITH_BARS = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_RED));
+    public static final ConcreteWithBarsBlock RED_CONCRETE_WITH_BARS = new ConcreteWithBarsBlock(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_RED));
     public static final Block YELLOW_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_YELLOW));
     public static final Block CRACKED_YELLOW_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_YELLOW));
-    public static final Block YELLOW_CONCRETE_WITH_BARS = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_YELLOW));
+    public static final ConcreteWithBarsBlock YELLOW_CONCRETE_WITH_BARS = new ConcreteWithBarsBlock(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_YELLOW));
     public static final Block GREEN_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_GREEN));
     public static final Block CRACKED_GREEN_CONCRETE = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_GREEN));
-    public static final Block GREEN_CONCRETE_WITH_BARS = new Block(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_GREEN));
+    public static final ConcreteWithBarsBlock GREEN_CONCRETE_WITH_BARS = new ConcreteWithBarsBlock(FabricBlockSettings.copy(WHITE_CONCRETE).mapColor(MapColor.TERRACOTTA_GREEN));
 
     // WOOD/FLOOR ======
     public static final Block HERRINGBONE_ACACIA_PLANKS = new Block(FabricBlockSettings.copy(Blocks.ACACIA_PLANKS));

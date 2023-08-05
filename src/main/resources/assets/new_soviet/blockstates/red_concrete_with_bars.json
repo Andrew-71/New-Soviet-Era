@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "new_soviet:block/red_concrete_with_bars", "uvlock": true },
+    "facing=east":  { "model": "new_soviet:block/red_concrete_with_bars", "y":  90, "uvlock": false },
+    "facing=south": { "model": "new_soviet:block/red_concrete_with_bars", "y": 180, "uvlock": false },
+    "facing=west":  { "model": "new_soviet:block/red_concrete_with_bars", "y": 270, "uvlock": false }
+  }
+}
