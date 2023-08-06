@@ -671,7 +671,13 @@ public class DataGeneration implements DataGeneratorEntrypoint {
             offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, NSE_Blocks.CHISELED_SPRUCE_DOOR, Blocks.SPRUCE_DOOR);
             offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, NSE_Blocks.CHISELED_BIRCH_DOOR, Blocks.BIRCH_DOOR);
 
-            createStairsRecipe(NSE_Blocks.SAND_TILES_STAIRS, Ingredient.ofItems(NSE_Blocks.SAND_TILES));
+            createStairsRecipe(NSE_Blocks.SAND_TILES_STAIRS, Ingredient.ofItems(NSE_Blocks.SAND_TILES))
+                    .criterion(hasItem(NSE_Blocks.SAND_TILES), conditionsFromItem(NSE_Blocks.SAND_TILES)).offerTo(exporter);
+
+            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, NSE_Custom.LIGHT_BULB, 1)
+                    .input('X', Items.IRON_INGOT).input('Y', Items.IRON_NUGGET).input('Z', NSE_Items.LIGHT_BULB)
+                    .pattern(" X ").pattern(" Y ").pattern(" Z ")
+                    .criterion(hasItem(NSE_Items.LIGHT_BULB), conditionsFromItem(NSE_Items.LIGHT_BULB)).offerTo(exporter);
         }
     }
 
