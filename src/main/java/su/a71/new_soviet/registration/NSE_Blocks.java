@@ -25,6 +25,7 @@ public class NSE_Blocks {
 
     // BUILDING BRICKS/TILES ====================
     public static final Block SAND_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.MUD_BRICKS).hardness(1.5f).requiresTool().resistance(6f).mapColor(MapColor.TERRACOTTA_BROWN));
+    public static final StairsBlock SAND_TILES_STAIRS = new StairsBlock(SAND_TILES.getDefaultState(), FabricBlockSettings.copy(SAND_TILES));
     public static final Block CRACKED_SAND_TILES = new Block(FabricBlockSettings.copy(SAND_TILES));
     public static final Block MOSSY_SAND_TILES = new Block(FabricBlockSettings.copy(SAND_TILES));
     public static final Block SMALL_SAND_TILES = new Block(FabricBlockSettings.copy(SAND_TILES));
@@ -106,6 +107,11 @@ public class NSE_Blocks {
     public static final Block CRACKED_TUFF_BRICKS = new Block(FabricBlockSettings.copy(Blocks.TUFF));
     public static final Block MOSSY_TUFF_BRICKS = new Block(FabricBlockSettings.copy(Blocks.TUFF));
 
+    public static final Block SMALL_WHITE_TILES = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).strength(1.5f, 6f).requiresTool().mapColor(MapColor.WHITE));
+    public static final Block SMALL_CRACKED_WHITE_TILES = new Block(FabricBlockSettings.copy(LIGHT_BLUE_TILES));
+    public static final Block GLAZED_WHITE_TILES = new Block(FabricBlockSettings.copy(LIGHT_BLUE_TILES));
+    public static final Block CRACKED_GLAZED_WHITE_TILES = new Block(FabricBlockSettings.copy(LIGHT_BLUE_TILES));
+
     public static final Block WHITEWASH = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.STONE).strength(1.5f, 6f).requiresTool().mapColor(MapColor.OFF_WHITE));
     public static final Block CRACKED_WHITEWASH = new Block(FabricBlockSettings.copy(WHITEWASH));
     public static final Block VERY_CRACKED_WHITEWASH = new Block(FabricBlockSettings.copy(WHITEWASH));
@@ -164,6 +170,7 @@ public class NSE_Blocks {
     public static final DoorBlock CHISELED_MANGROVE_DOOR = new DoorBlock(FabricBlockSettings.copy(Blocks.MANGROVE_DOOR), BlockSetType.MANGROVE);
     public static final DoorBlock CHISELED_OAK_DOOR = new DoorBlock(FabricBlockSettings.copy(Blocks.OAK_DOOR), BlockSetType.OAK);
     public static final DoorBlock CHISELED_SPRUCE_DOOR = new DoorBlock(FabricBlockSettings.copy(Blocks.SPRUCE_DOOR), BlockSetType.SPRUCE);
+    public static final DoorBlock CHISELED_BIRCH_DOOR = new DoorBlock(FabricBlockSettings.copy(Blocks.BIRCH_DOOR), BlockSetType.BIRCH);
 
     // Industrial =====================================
     public static final Block INDUSTRIAL_WARNING = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).hardness(4f).resistance(6f).requiresTool().mapColor(MapColor.BLACK));
@@ -203,6 +210,7 @@ public class NSE_Blocks {
     public static void init() {
         Registry.register(Registries.ITEM_GROUP, new Identifier("new_soviet", "building_blocks"), NSE_BUILDING_TAB);
         register("sand_tiles", () -> SAND_TILES, NSE_BUILDING_TAB);
+        register("sand_tiles_stairs", () -> SAND_TILES_STAIRS, NSE_BUILDING_TAB);
         register("cracked_sand_tiles", () -> CRACKED_SAND_TILES, NSE_BUILDING_TAB);
         register("mossy_sand_tiles", () -> MOSSY_SAND_TILES, NSE_BUILDING_TAB);
         register("small_sand_tiles", () -> SMALL_SAND_TILES, NSE_BUILDING_TAB);
@@ -273,6 +281,10 @@ public class NSE_Blocks {
         register("tuff_bricks", () -> TUFF_BRICKS, NSE_BUILDING_TAB);
         register("cracked_tuff_bricks", () -> CRACKED_TUFF_BRICKS, NSE_BUILDING_TAB);
         register("mossy_tuff_bricks", () -> MOSSY_TUFF_BRICKS, NSE_BUILDING_TAB);
+        register("small_white_tiles", () -> SMALL_WHITE_TILES, NSE_BUILDING_TAB);
+        register("small_cracked_white_tiles", () -> SMALL_CRACKED_WHITE_TILES, NSE_BUILDING_TAB);
+        register("glazed_white_tiles", () -> GLAZED_WHITE_TILES, NSE_BUILDING_TAB);
+        register("cracked_glazed_white_tiles", () -> CRACKED_GLAZED_WHITE_TILES, NSE_BUILDING_TAB);
 
         register("whitewash", () -> WHITEWASH, NSE_BUILDING_TAB);
         register("cracked_whitewash", () -> CRACKED_WHITEWASH, NSE_BUILDING_TAB);
@@ -331,6 +343,7 @@ public class NSE_Blocks {
         register("chiseled_mangrove_door", () -> CHISELED_MANGROVE_DOOR, NSE_BUILDING_TAB);
         register("chiseled_oak_door", () -> CHISELED_OAK_DOOR, NSE_BUILDING_TAB);
         register("chiseled_spruce_door", () -> CHISELED_SPRUCE_DOOR, NSE_BUILDING_TAB);
+        register("chiseled_birch_door", () -> CHISELED_BIRCH_DOOR, NSE_BUILDING_TAB);
 
         register("industrial_warning", () -> INDUSTRIAL_WARNING, NSE_BUILDING_TAB);
         register("gray_warning", () -> GRAY_WARNING, NSE_BUILDING_TAB);

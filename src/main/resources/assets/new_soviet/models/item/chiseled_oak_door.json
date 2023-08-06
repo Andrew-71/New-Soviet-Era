@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "new_soviet:item/chiseled_oak_door"
+    "layer0": "new_soviet:item/doors/chiseled_oak_door"
   }
 }

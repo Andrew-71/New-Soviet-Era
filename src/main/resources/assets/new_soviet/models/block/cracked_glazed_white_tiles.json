@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "new_soviet:block/white/cracked_glazed_white_tiles",
+    "particle": "new_soviet:block/white/cracked_glazed_white_tiles"
+  }
+}

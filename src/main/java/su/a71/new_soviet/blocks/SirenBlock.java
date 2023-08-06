@@ -43,7 +43,7 @@ public class SirenBlock extends HorizontalFacingBlock {
                 if (bl) {
                     world.scheduleBlockTick(pos, this, 4);
                 } else {
-                    world.playSound((PlayerEntity)null, pos.getX(), pos.getY(), pos.getZ(), NSE_Custom.SIREN_SOUND, SoundCategory.NEUTRAL, 1F, 1f);
+                    world.playSound((PlayerEntity)null, pos.getX(), pos.getY(), pos.getZ(), NSE_Custom.SIREN_SOUND, SoundCategory.NEUTRAL, 5F, 1f);
                     world.setBlockState(pos, (BlockState)state.cycle(ON), 2);
                     world.scheduleBlockTick(pos, this, 140);
                 }
@@ -88,7 +88,7 @@ public class SirenBlock extends HorizontalFacingBlock {
 
         } else {
             NewSoviet.LOG.info("Playing!");
-            world.playSound((PlayerEntity)null, pos.getX(), pos.getY(), pos.getZ(), NSE_Custom.SIREN_SOUND, SoundCategory.NEUTRAL, 1F, 1f);
+            world.playSound((PlayerEntity)null, pos.getX(), pos.getY(), pos.getZ(), NSE_Custom.SIREN_SOUND, SoundCategory.NEUTRAL, 5F, 1f);
             world.scheduleBlockTick(pos, this, 140);
         }
     }

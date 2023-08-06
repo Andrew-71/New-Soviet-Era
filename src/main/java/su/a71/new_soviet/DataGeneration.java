@@ -18,6 +18,7 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
@@ -660,6 +661,9 @@ public class DataGeneration implements DataGeneratorEntrypoint {
             offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, NSE_Blocks.CHISELED_MANGROVE_DOOR, Blocks.MANGROVE_DOOR);
             offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, NSE_Blocks.CHISELED_OAK_DOOR, Blocks.OAK_DOOR);
             offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, NSE_Blocks.CHISELED_SPRUCE_DOOR, Blocks.SPRUCE_DOOR);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, NSE_Blocks.CHISELED_BIRCH_DOOR, Blocks.BIRCH_BUTTON);
+
+            createStairsRecipe(NSE_Blocks.SAND_TILES_STAIRS, Ingredient.ofItems(NSE_Blocks.SAND_TILES));
         }
     }
 
