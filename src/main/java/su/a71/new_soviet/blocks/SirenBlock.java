@@ -90,11 +90,10 @@ public class SirenBlock extends HorizontalFacingBlock {
     
     public float getSirenVolume(World world, BlockPos pos) {
         return switch (world.getReceivedRedstonePower(pos)) {
-            case 1, 2, 3 -> 2f;
-            case 4, 5, 6 -> 3f;
-            case 7, 8, 9 -> 4f;
-            case 10, 11, 12 -> 5f;
-            case 13, 14, 15, 16 -> 6f;
+            case 4, 5, 6 -> 2f;
+            case 7, 8, 9 -> 3f;
+            case 10, 11, 12 -> 4f;
+            case 13, 14, 15, 16 -> 5f;
             default -> 1f;
         };
     }
