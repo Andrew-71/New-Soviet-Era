@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "new_soviet:small_white_tiles"
+  },
+  "result": "new_soviet:glazed_white_tiles"
+}

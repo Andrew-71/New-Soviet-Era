@@ -473,6 +473,7 @@ public class DataGeneration implements DataGeneratorEntrypoint {
         public void generate(Consumer<RecipeJsonProvider> exporter) {
             crissCrossRecipe(exporter, NSE_Blocks.SAND_TILES, Blocks.SMOOTH_SANDSTONE, Blocks.SMOOTH_RED_SANDSTONE);
             crissCrossRecipe(exporter, NSE_Blocks.LIGHT_BLUE_TILES, Blocks.STONE, Items.LIGHT_BLUE_DYE);
+            crissCrossRecipe(exporter, NSE_Blocks.SMALL_WHITE_TILES, Blocks.STONE, Items.WHITE_DYE);
             crissCrossRecipe(exporter, NSE_Blocks.GREEN_WHITE_TILES, Blocks.POLISHED_DIORITE, Items.GREEN_DYE);
 
             tvRecipe(exporter, NSE_Custom.TV, Items.ORANGE_DYE);
@@ -614,6 +615,13 @@ public class DataGeneration implements DataGeneratorEntrypoint {
             }), RecipeCategory.BUILDING_BLOCKS);
 
             stoneCuttingCategory(exporter, Util.make(Lists.newArrayList(), list -> {
+                list.add(NSE_Blocks.SMALL_WHITE_TILES);
+                list.add(NSE_Blocks.SMALL_CRACKED_WHITE_TILES);
+                list.add(NSE_Blocks.GLAZED_WHITE_TILES);
+                list.add(NSE_Blocks.CRACKED_GLAZED_WHITE_TILES);
+            }), RecipeCategory.BUILDING_BLOCKS);
+
+            stoneCuttingCategory(exporter, Util.make(Lists.newArrayList(), list -> {
                 list.add(NSE_Blocks.CROSS_ACACIA_PLANKS);
                 list.add(NSE_Blocks.HERRINGBONE_ACACIA_PLANKS);
                 list.add(Blocks.ACACIA_PLANKS);
@@ -661,7 +669,7 @@ public class DataGeneration implements DataGeneratorEntrypoint {
             offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, NSE_Blocks.CHISELED_MANGROVE_DOOR, Blocks.MANGROVE_DOOR);
             offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, NSE_Blocks.CHISELED_OAK_DOOR, Blocks.OAK_DOOR);
             offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, NSE_Blocks.CHISELED_SPRUCE_DOOR, Blocks.SPRUCE_DOOR);
-            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, NSE_Blocks.CHISELED_BIRCH_DOOR, Blocks.BIRCH_BUTTON);
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, NSE_Blocks.CHISELED_BIRCH_DOOR, Blocks.BIRCH_DOOR);
 
             createStairsRecipe(NSE_Blocks.SAND_TILES_STAIRS, Ingredient.ofItems(NSE_Blocks.SAND_TILES));
         }

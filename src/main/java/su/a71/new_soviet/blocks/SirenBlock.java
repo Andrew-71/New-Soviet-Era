@@ -43,7 +43,7 @@ public class SirenBlock extends HorizontalFacingBlock {
                 if (bl) {
                     world.scheduleBlockTick(pos, this, 4);
                 } else {
-                    world.playSound((PlayerEntity)null, pos.getX(), pos.getY(), pos.getZ(), NSE_Custom.SIREN_SOUND, SoundCategory.NEUTRAL, 5F, 1f);
+                    world.playSound((PlayerEntity)null, pos.getX(), pos.getY(), pos.getZ(), NSE_Custom.SIREN_SOUND, SoundCategory.NEUTRAL, getSirenVolume(world, pos), 1f);
                     world.setBlockState(pos, (BlockState)state.cycle(ON), 2);
                     world.scheduleBlockTick(pos, this, 140);
                 }
@@ -88,9 +88,20 @@ public class SirenBlock extends HorizontalFacingBlock {
 
         } else {
             NewSoviet.LOG.info("Playing!");
-            world.playSound((PlayerEntity)null, pos.getX(), pos.getY(), pos.getZ(), NSE_Custom.SIREN_SOUND, SoundCategory.NEUTRAL, 5F, 1f);
+            world.playSound((PlayerEntity)null, pos.getX(), pos.getY(), pos.getZ(), NSE_Custom.SIREN_SOUND, SoundCategory.NEUTRAL, getSirenVolume(world, pos), 1f);
             world.scheduleBlockTick(pos, this, 140);
         }
+    }
+    
+    public float getSirenVolume(World world, BlockPos pos) {
+        return switch (world.getReceivedRedstonePower(pos)) {
+            case 1, 2, 3 -> 2f;
+            case 4, 5, 6 -> 3f;
+            case 7, 8, 9 -> 4f;
+            case 10, 11, 12 -> 5f;
+            case 13, 14, 15, 16 -> 6f;
+            default -> 1f;
+        };
     }
 
     static {
