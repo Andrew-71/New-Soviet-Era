@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "lit=true,cracked=true": {
+      "model": "new_soviet:block/light_bulb_broken"
+    },
+    "lit=true,cracked=false": {
+      "model": "new_soviet:block/light_bulb_on"
+    },
+    "lit=false,cracked=false": {
+      "model": "new_soviet:block/light_bulb_off"
+    },
+    "lit=false,cracked=true": {
+      "model": "new_soviet:block/light_bulb_broken"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "new_soviet:block/light_bulb_on",
+	"textures": {
+		"0": "new_soviet:block/custom/furniture/light_bulb_off",
+		"particle": "new_soviet:block/custom/furniture/light_bulb_off"
+	}
+}

@@ -20,7 +20,6 @@ import net.minecraft.world.BlockView;
 
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
-import su.a71.new_soviet.NewSoviet;
 import su.a71.new_soviet.registration.NSE_Custom;
 
 public class SirenBlock extends HorizontalFacingBlock {
@@ -81,13 +80,9 @@ public class SirenBlock extends HorizontalFacingBlock {
     }
 
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        NewSoviet.LOG.info("Scheduled tick");
         if ((Boolean)state.get(ON) && !world.isReceivingRedstonePower(pos)) {
             world.setBlockState(pos, (BlockState)state.cycle(ON), 2);
-            NewSoviet.LOG.info("Stopping!");
-
         } else {
-            NewSoviet.LOG.info("Playing!");
             world.playSound((PlayerEntity)null, pos.getX(), pos.getY(), pos.getZ(), NSE_Custom.SIREN_SOUND, SoundCategory.NEUTRAL, getSirenVolume(world, pos), 1f);
             world.scheduleBlockTick(pos, this, 140);
         }

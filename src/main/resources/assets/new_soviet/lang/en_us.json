@@ -148,5 +148,7 @@
   "block.new_soviet.white_concrete_with_bars": "White Concrete With Bars",
   "block.new_soviet.green_concrete_with_bars": "Green Concrete With Bars",
   "block.new_soviet.blue_concrete_with_bars": "Blue Concrete With Bars",
-  "block.new_soviet.red_concrete_with_bars": "Red Concrete With Bars"
+  "block.new_soviet.red_concrete_with_bars": "Red Concrete With Bars",
+  "subtitles.new_soviet.light_bulb_broken": "Light bulb breaks",
+  "block.new_soviet.light_bulb": "Light Bulb"
 }

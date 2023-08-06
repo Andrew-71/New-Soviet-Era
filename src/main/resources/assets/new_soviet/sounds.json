@@ -10,6 +10,12 @@
     "sounds": [
       "new_soviet:siren"
     ]
+  },
+  "light_bulb_broken_sound": {
+    "subtitle": "subtitles.new_soviet.light_bulb_broken",
+    "sounds": [
+      "new_soviet:light_bulb_broken"
+    ]
   }
 }
 
