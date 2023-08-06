@@ -29,7 +29,7 @@ public class NSE_Custom {
     public static final TVBlock BROWN_TV = new TVBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_BROWN));
     public static final RadioBlock RADIO = new RadioBlock();
     public static final LampBlock LAMP = new LampBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.LANTERN).strength(1f, 1.5f).mapColor(MapColor.WHITE));
-    public static final LightBulbBlock LIGHT_BULB = new LightBulbBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.LANTERN).strength(1f, 1.5f).mapColor(MapColor.WHITE));
+    public static final LightBulbBlock LIGHT_BULB = new LightBulbBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.GLASS).strength(1f, 1.5f).mapColor(MapColor.WHITE));
     public static final SoundEvent LIGHT_BULB_BROKEN_SOUND = SoundEvent.of(new Identifier("new_soviet", "light_bulb_broken_sound"));
 
     public static final CeilingFanBlock CEILING_FAN = new CeilingFanBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).strength(1f, 1.5f).mapColor(MapColor.WHITE));

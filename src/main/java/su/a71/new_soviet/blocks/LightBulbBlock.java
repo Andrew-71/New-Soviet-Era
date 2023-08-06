@@ -26,6 +26,7 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
 import su.a71.new_soviet.registration.NSE_Custom;
+import su.a71.new_soviet.registration.NSE_Items;
 
 public class LightBulbBlock extends Block implements Waterloggable {
     protected static final VoxelShape SHAPE;
@@ -69,9 +70,12 @@ public class LightBulbBlock extends Block implements Waterloggable {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-//        if (!world.isClient && !state.get(BROKEN)) {
-//            world.setBlockState(pos, (BlockState)state.with(ON, !state.get(ON)), 1);
-//        }
+        if (!world.isClient && state.get(BROKEN) && player.getInventory().getMainHandStack().getItem() == NSE_Items.LIGHT_BULB) {
+            if (!player.isCreative())
+                player.getInventory().getMainHandStack().decrement(1);
+            world.setBlockState(pos, (BlockState)state.with(BROKEN, false)
+                    .with(ON, world.isReceivingRedstonePower(pos)), 2);
+        }
         return super.onUse(state, world, pos, player, hand, hit);
     }
 

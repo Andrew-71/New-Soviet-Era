@@ -1,0 +1,7 @@
+{
+  "credit": "Karoter2",
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "new_soviet:item/bulb"
+  }
+}

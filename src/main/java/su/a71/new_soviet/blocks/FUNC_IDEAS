@@ -1,13 +1,5 @@
 Ideas for block functionality
 
-Radio: Inventory where you can put music disks, and a UI to play, shuffle (and pause?) them. Like a jukebox on steroids
+Radio: Like a jukebox on steroids. Maybe container for disks, maybe a way to connect to real radio. Who knows.
 TV: CC compatible peripheral which combines a speaker and an 8x8 monitor
-Crate: Inventory, like a barrel but smaller
-Air Raid Siren: when powered (?), plays chosen frequency in chosen way at chosen sound. CC Peripheral attached
-Lamp: Both bedside and ceiling are one block, Lamp, that functions sort of like a lantern
-
-Landmine:
-попали -> кабум
-тронули не лопатой -> кабум 80%
-тронули лопатой(сломали) -> 25% кабум
-обезвредили лопатой (ПКМ задержать) -> не кабум
+Crate: Like a shulker box but much smaller (but cheaper!)
