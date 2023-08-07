@@ -8,7 +8,6 @@ import net.minecraft.util.math.random.Random;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import su.a71.new_soviet.registration.NSE_Blocks;
-import su.a71.new_soviet.registration.NSE_Combat;
 import su.a71.new_soviet.registration.NSE_Custom;
 import su.a71.new_soviet.registration.NSE_Items;
 
@@ -31,6 +30,5 @@ public class NewSoviet implements ModInitializer {
         NSE_Blocks.initFlame();
         NSE_Items.init();
         NSE_Custom.init();
-        NSE_Combat.init();
     }
 }

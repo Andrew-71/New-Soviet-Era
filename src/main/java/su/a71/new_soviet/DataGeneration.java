@@ -24,7 +24,6 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.Util;
 import su.a71.new_soviet.registration.NSE_Blocks;
-import su.a71.new_soviet.registration.NSE_Combat;
 import su.a71.new_soviet.registration.NSE_Custom;
 import su.a71.new_soviet.registration.NSE_Items;
 
@@ -689,6 +688,7 @@ public class DataGeneration implements DataGeneratorEntrypoint {
 
         @Override
         public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+//            BlockStateModelGenerator.createStairsBlockState(NSE_Blocks.SAND_TILES_STAIRS, new Identifier(NewSoviet.MOD_ID, "sand_tiles_stairs"));
         }
 
         @Override

@@ -37,6 +37,8 @@ public class NSE_Custom {
     public static final SirenBlock SIREN = new SirenBlock();
     public static final SoundEvent SIREN_SOUND = SoundEvent.of(new Identifier("new_soviet", "siren_sound"));
 
+    public static final LandMineBlock LANDMINE = new LandMineBlock(FabricBlockSettings.create().mapColor(MapColor.LIGHT_GRAY));
+
     private static final ItemGroup NSE_CUSTOM_TAB = FabricItemGroup.builder()
             .icon(() -> new ItemStack(TV))
             .displayName(Text.translatable("itemGroup.new_soviet.custom"))
@@ -64,6 +66,7 @@ public class NSE_Custom {
         register("light_bulb", () -> LIGHT_BULB, NSE_CUSTOM_TAB);
         register("ceiling_fan", () -> CEILING_FAN, NSE_CUSTOM_TAB);
         register("siren", () -> SIREN, NSE_CUSTOM_TAB);
+        register("landmine", () -> LANDMINE, NSE_CUSTOM_TAB);
 
         Registry.register(Registries.SOUND_EVENT, new Identifier("new_soviet", "siren_sound"), SIREN_SOUND);
         Registry.register(Registries.SOUND_EVENT, new Identifier("new_soviet", "light_bulb_broken_sound"), LIGHT_BULB_BROKEN_SOUND);
