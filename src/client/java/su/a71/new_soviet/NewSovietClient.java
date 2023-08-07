@@ -4,7 +4,9 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
+import su.a71.new_soviet.entity.TVBlockEntity;
 import su.a71.new_soviet.registration.NSE_Blocks;
 import su.a71.new_soviet.registration.NSE_Custom;
 
@@ -17,5 +19,7 @@ public class NewSovietClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(NSE_Custom.LAMP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(NSE_Custom.CEILING_FAN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(NSE_Custom.SIREN, RenderLayer.getCutout());
+
+        BlockEntityRendererRegistry.register(NSE_Custom.TV_BLOCK_ENTITY, TVBlockEntityRenderer::new);
     }
 }
